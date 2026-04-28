@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abhijeet Gore - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        /* Mobile Responsiveness */
+        @media screen and (max-width: 768px) {
+            .nav-links {
+                position: absolute;
+                right: 0;
+                height: 100vh;
+                top: 0;
+                background-color: #fff;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                width: 60%;
+                transform: translateX(100%);
+                transition: transform 0.3s ease-in-out;
+                box-shadow: -2px 0 5px rgba(0,0,0,0.1);
+                z-index: 1000;
+            }
+            
+            .nav-links.active {
+                transform: translateX(0%);
+            }
+
+            .nav-links li {
+                margin: 20px 0;
+            }
+
+            .hamburger {
+                display: block !important;
+                z-index: 1001;
+                cursor: pointer;
+                font-size: 1.5rem;
+            }
+
+            .hero-container {
+                flex-direction: column-reverse;
+                text-align: center;
+                padding-top: 80px;
+            }
+
+            .hero-image {
+                width: 100%;
+                margin-bottom: 30px;
+                display: flex;
+                justify-content: center;
+            }
+            
+            .hero-image img {
+                max-width: 80%;
+                height: auto;
+            }
+
+            .about-content, .contact-content {
+                flex-direction: column;
+            }
+
+            .about-text, .education-timeline {
+                width: 100%;
+                margin-bottom: 30px;
+            }
+
+            .skills-grid, .projects-grid, .certificates-grid, .experience-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <header id="header">
+        <div class="container nav-container">
+            <a href="#" class="logo">Abhijeet Gore</a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#certificates">Certificates</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <div class="hamburger">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container hero-container">
+            <div class="hero-content">
+                <h1>Hello, I'm <span class="highlight">Abhijeet Arun Gore</span></h1>
+                <p class="tagline">I am a <span class="typewriter"></span></p>
+                <div class="cta-buttons">
+                    <a href="#contact" class="btn btn-primary">Contact Me</a>
+                    <a href="#projects" class="btn btn-secondary">View Work</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="images/perf.jpg" alt="Abhijeet Gore" onerror="this.src='https://via.placeholder.com/400'">
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section" data-aos="fade-up">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>I am <strong>Abhijeet Arun Gore</strong>, a passionate Computer Engineering student specializing in Data Science and Machine Learning. With a strong foundation in Python and AI, I love solving complex problems through data. I actively participate in hackathons and internships to bridge the gap between theory and practice.</p>
+                    <ul class="about-details">
+                        <li><i class="fas fa-map-marker-alt" style="color: var(--primary-color); width: 25px;"></i> Maharashtra, India</li>
+                        <li><i class="fas fa-envelope" style="color: var(--primary-color); width: 25px;"></i> goreabhijeet137@gmail.com</li>
+                        <li><i class="fas fa-phone" style="color: var(--primary-color); width: 25px;"></i> +91 9403909309</li>
+                        <li><i class="fas fa-university" style="color: var(--primary-color); width: 25px;"></i> SNJB’s KBJ College of Engineering</li>
+                    </ul>
+                </div>
+                <div class="education-timeline">
+                    <h3>Education</h3>
+                    <div class="timeline-item">
+                        <span class="timeline-dot"></span>
+                        <span class="timeline-date">2023 – 2027 (Expected)</span>
+                        <h4>B.E. Computer Engineering</h4>
+                        <p>SNJB’s KBJ College of Engineering, Chandwad</p>
+                        <p>CGPA: 8.06/10</p>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="timeline-dot"></span>
+                        <span class="timeline-date">Jul 2020 – Jul 2022</span>
+                        <h4>Intermediate (11th–12th), Science</h4>
+                        <p>SRTMU, Nanded</p>
+                        <p>Grade: 71.33%</p>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="timeline-dot"></span>
+                        <span class="timeline-date">Jul 2019 – Jul 2020</span>
+                        <h4>10th Standard</h4>
+                        <p>MSBSHSE</p>
+                        <p>Grade: 87.80%</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section" data-aos="fade-up">
+        <div class="container">
+            <h2 class="section-title">My Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <i class="fab fa-python"></i>
+                    <h3>Python</h3>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-brain"></i>
+                    <h3>AI/ML</h3>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-database"></i>
+                    <h3>Data Science</h3>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-code"></i>
+                    <h3>Web Dev</h3>
+                    <p>HTML/CSS/JS/MERN</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-cloud"></i>
+                    <h3>Cloud</h3>
+                    <p>OCI/AWS</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-chart-bar"></i>
+                    <h3>Data Viz</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="section" data-aos="fade-up">
+        <div class="container">
+            <h2 class="section-title">Internships & Experience</h2>
+            <div class="experience-grid">
+                <div class="experience-card">
+                    <h3>UK Valley Technology</h3>
+                    <span class="role">Web Developer Intern</span>
+                    <ul>
+                        <li>Worked on responsive UI design and basic web functionality.</li>
+                        <li>Improved front-end performance and user experience.</li>
+                        <li>Collaborated with the development team.</li>
+                    </ul>
+                </div>
+                <div class="experience-card">
+                    <h3>AICTE Eduskills</h3>
+                    <span class="role">AI/ML & Data Science Intern</span>
+                    <ul>
+                        <li>Completed AI/ML Internship (Virtual).</li>
+                        <li>Completed Data Science Internship (Altair).</li>
+                        <li>Gained hands-on experience in applied technologies.</li>
+                    </ul>
+                </div>
+                
+                <div class="experience-card">
+                    <h3>Deloitte Australia</h3>
+                    <span class="role">Data Analytics Job Simulation</span>
+                    <ul>
+                        <li>Completed practical tasks in data analytics.</li>
+                        <li>Simulated real-world job scenarios.</li>
+                    </ul>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 40px;">
+                <a href="https://www.linkedin.com/in/abhijeet-gore-972225282/details/experience/" target="_blank" class="btn btn-primary">
+                    View All Experience on LinkedIn <i class="fab fa-linkedin"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section bg-light" data-aos="fade-up">
+        <div class="container">
+            <h2 class="section-title">Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card js-tilt">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=600&q=80" alt="Sales Analysis">
+                    </div>
+                    <div class="card-content">
+                        <h3>Sales Data Analysis & Visualization</h3>
+                        <p class="tech-stack">Python, Pandas, Matplotlib, Seaborn</p>
+                        <p>End-to-end analysis transforming raw sales data into KPI-driven insights using data cleaning, aggregation, and business-focused visualizations to support decision-making.</p>
+                        <a href="https://github.com/AbhijeetArunGore/Sales_Data_Analysis_and_Visualization-Pandas-Matplotlib-Seaborn" target="_blank" class="btn-link">View Project <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="project-card js-tilt">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1518546305927-5a555bb7020d?auto=format&fit=crop&w=600&q=80" alt="Bitcoin Prediction">
+                    </div>
+                    <div class="card-content">
+                        <h3>ML-based Bitcoin Prediction</h3>
+                        <p class="tech-stack">Python, ML</p>
+                        <p>ML-driven system using indicators like Supertrend, EMA, and RSI for breakout detection.</p>
+                        <a href="https://github.com/AbhijeetArunGore" target="_blank" class="btn-link">View Project <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="project-card js-tilt">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&q=80" alt="Telecom Churn">
+                    </div>
+                    <div class="card-content">
+                        <h3>Telecom Churn Dashboard</h3>
+                        <p class="tech-stack">Python, ML, Streamlit</p>
+                        <p>A simple and interactive Machine Learning web app that predicts customer churn. Built using Python, ML models, and Streamlit. This project shows my skills in data cleaning, feature engineering, and model deployment.</p>
+                        <a href="https://github.com/AbhijeetArunGore" target="_blank" class="btn-link">View Project <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="project-card js-tilt">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=600&q=80" alt="Smart Screen">
+                    </div>
+                    <div class="card-content">
+                        <h3>Smart Screen Brightness</h3>
+                        <p class="tech-stack">Python, OpenCV, ML</p>
+                        <p>Adjusts screen brightness automatically based on real-time face detection.</p>
+                        <a href="https://github.com/AbhijeetArunGore" target="_blank" class="btn-link">View Project <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="project-card js-tilt">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=600&q=80" alt="Fraud Detection">
+                    </div>
+                    <div class="card-content">
+                        <h3>Fraud Detection Pipeline</h3>
+                        <p class="tech-stack">Jupyter, Python</p>
+                        <p>Extensive data cleaning and processing pipeline for financial fraud detection.</p>
+                        <a href="https://github.com/AbhijeetArunGore" target="_blank" class="btn-link">View Project <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="project-card js-tilt">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=600&q=80" alt="Airline Analysis">
+                    </div>
+                    <div class="card-content">
+                        <h3>Airline Data Analysis</h3>
+                        <p class="tech-stack">Python, Pandas, Matplotlib</p>
+                        <p>Analyzed yearly trends and growth patterns in airline passenger data.</p>
+                        <a href="https://github.com/AbhijeetArunGore" target="_blank" class="btn-link">View Project <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="project-card js-tilt">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?auto=format&fit=crop&w=600&q=80" alt="News App">
+                    </div>
+                    <div class="card-content">
+                        <h3>News App</h3>
+                        <p class="tech-stack">React, JavaScript</p>
+                        <p>Dynamic news application featuring real-time fetching and responsive UI.</p>
+                        <a href="https://github.com/AbhijeetArunGore" target="_blank" class="btn-link">View Project <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="project-card js-tilt">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1586281380349-632531db7ed4?auto=format&fit=crop&w=600&q=80" alt="Resume Generator">
+                    </div>
+                    <div class="card-content">
+                        <h3>Resume Generator</h3>
+                        <p class="tech-stack">JavaScript, HTML</p>
+                        <p>Web-based tool to generate professional resumes dynamically.</p>
+                        <a href="https://github.com/AbhijeetArunGore" target="_blank" class="btn-link">View Project <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="project-card js-tilt">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1501183638710-841dd1904471?auto=format&fit=crop&w=600&q=80" alt="Airbnb UI">
+                    </div>
+                    <div class="card-content">
+                        <h3>Airbnb Mobile UI Design</h3>
+                        <p class="tech-stack">Figma, Canva</p>
+                        <p>Designed a mobile-friendly Airbnb-style app UI including login and home screens.</p>
+                        <a href="https://github.com/AbhijeetArunGore" target="_blank" class="btn-link">View Project <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <!-- See More Card -->
+                <div class="project-card js-tilt" style="display: flex; align-items: center; justify-content: center; background: var(--primary-color); color: white;">
+                    <div class="card-content" style="text-align: center;">
+                        <i class="fab fa-github" style="font-size: 4rem; margin-bottom: 15px; color: white;"></i>
+                        <h3 style="color: white;">See More on GitHub</h3>
+                        <p style="color: rgba(255,255,255,0.8); margin-bottom: 20px;">Check out all my repositories and source code.</p>
+                        <a href="https://github.com/AbhijeetArunGore" target="_blank" class="btn btn-secondary" style="background: white; color: var(--primary-color); border: none;">Visit Profile</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certificates Section -->
+    <section id="certificates" class="section" data-aos="fade-up">
+        <div class="container">
+            <h2 class="section-title">Certificates</h2>
+            <div class="certificates-grid">
+                <div class="cert-card js-tilt">
+                    <div class="cert-icon"><i class="fab fa-aws"></i></div>
+                    <div class="cert-info">
+                        <h3>AWS Educate Introduction to Generative AI</h3>
+                        <p class="issuer">AWS Educate - Training Badge</p>
+                        <p class="date">Issued: Jan 2026</p>
+                        <a href="https://www.credly.com/badges/b04e3e68-6289-494d-af39-f1f258ebe639" target="_blank" class="btn-sm">Show Credential</a>
+                    </div>
+                </div>
+                <div class="cert-card js-tilt">
+                    <div class="cert-icon"><i class="fas fa-chart-line"></i></div>
+                    <div class="cert-info">
+                        <h3>Data Analytics Job Simulation</h3>
+                        <p class="issuer">Deloitte Australia (Forage)</p>
+                        <p class="date">Issued: Nov 2025</p>
+                        <a href="https://www.linkedin.com/in/abhijeet-gore-972225282/details/certifications/" target="_blank" class="btn-sm">Show Credential</a>
+                    </div>
+                </div>
+                <div class="cert-card js-tilt">
+                    <div class="cert-icon"><i class="fab fa-aws"></i></div>
+                    <div class="cert-info">
+                        <h3>AWS Academy Graduate</h3>
+                        <p class="issuer">Machine Learning Foundations</p>
+                        <p class="date">Issued: Sep 2025</p>
+                        <a href="https://www.linkedin.com/in/abhijeet-gore-972225282/details/certifications/" target="_blank" class="btn-sm">Show Credential</a>
+                    </div>
+                </div>
+                <div class="cert-card js-tilt">
+                    <div class="cert-icon"><i class="fas fa-brain"></i></div>
+                    <div class="cert-info">
+                        <h3>Data Science & ML with Python</h3>
+                        <p class="issuer">Udemy</p>
+                        <p class="date">Issued: Mar 2025</p>
+                        <a href="https://www.linkedin.com/in/abhijeet-gore-972225282/details/certifications/" target="_blank" class="btn-sm">Show Credential</a>
+                    </div>
+                </div>
+                <div class="cert-card js-tilt">
+                    <div class="cert-icon"><i class="fas fa-code"></i></div>
+                    <div class="cert-info">
+                        <h3>Data Analysis with Python</h3>
+                        <p class="issuer">Scaler</p>
+                        <p class="date">Issued: Feb 2025</p>
+                        <a href="https://www.linkedin.com/in/abhijeet-gore-972225282/details/certifications/" target="_blank" class="btn-sm">Show Credential</a>
+                    </div>
+                </div>
+                <div class="cert-card js-tilt">
+                    <div class="cert-icon"><i class="fas fa-chart-pie"></i></div>
+                    <div class="cert-info">
+                        <h3>Data Visualization Job Simulation</h3>
+                        <p class="issuer">Tata Group (Forage)</p>
+                        <p class="date">Issued: Feb 2025</p>
+                        <a href="https://www.linkedin.com/in/abhijeet-gore-972225282/details/certifications/" target="_blank" class="btn-sm">Show Credential</a>
+                    </div>
+                </div>
+                <div class="cert-card js-tilt">
+                    <div class="cert-icon"><i class="fas fa-database"></i></div>
+                    <div class="cert-info">
+                        <h3>Foundations: Data, Data, Everywhere</h3>
+                        <p class="issuer">United Latino Students Association</p>
+                        <p class="date">Issued: Nov 2024</p>
+                        <a href="https://www.linkedin.com/in/abhijeet-gore-972225282/details/certifications/" target="_blank" class="btn-sm">Show Credential</a>
+                    </div>
+                </div>
+                <div class="cert-card js-tilt">
+                    <div class="cert-icon"><i class="fab fa-microsoft"></i></div>
+                    <div class="cert-info">
+                        <h3>Power BI Fundamentals</h3>
+                        <p class="issuer">Office Master</p>
+                        <p class="date">Issued: Nov 2024</p>
+                        <a href="https://www.linkedin.com/in/abhijeet-gore-972225282/details/certifications/" target="_blank" class="btn-sm">Show Credential</a>
+                    </div>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 40px;">
+                <a href="https://www.linkedin.com/in/abhijeet-gore-972225282/details/certifications/" target="_blank" class="btn btn-primary">
+                    View All Certifications on LinkedIn <i class="fab fa-linkedin"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section bg-light" data-aos="fade-up">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-content">
+                <form class="contact-form" action="https://formsubmit.co/goreabhijeet137@gmail.com" method="POST">
+                    <!-- Hidden inputs for FormSubmit configuration -->
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_subject" value="New Contact Form Submission from Portfolio">
+                    <input type="hidden" name="_template" value="table">
+                    <div class="form-group">
+                        <input type="text" name="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea name="message" placeholder="Your Message (Please include your contact number)" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+                <div class="social-links">
+                    <h3>Connect with me</h3>
+                    <div class="social-icons">
+                        <a href="https://www.linkedin.com/in/abhijeet-gore-972225282/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://github.com/AbhijeetArunGore" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="mailto:goreabhijeet137@gmail.com"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-container">
+            <p>&copy; 2024 Abhijeet Gore. All Rights Reserved.</p>
+            <div class="footer-links">
+                <a href="https://www.linkedin.com/in/abhijeet-gore-972225282/" target="_blank">LinkedIn</a>
+                <a href="https://github.com/AbhijeetArunGore" target="_blank">GitHub</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+    </script>
+    <script src="tilt.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
