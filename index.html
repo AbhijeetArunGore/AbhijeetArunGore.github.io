@@ -3,79 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Abhijeet Gore - Portfolio</title>
+    <title>Abhijeet Gore | Data Analyst | Data Scientist | ML Engineer | AI Engineer | Nashik | Immediate Joiner</title>
+    <meta name="description" content="Final-year Data Science Honours student. 6 internships, 24+ certifications, 11 projects. Deloitte & Tata Forage simulations. Python, SQL, Power BI, AWS, ML. Immediate Joiner. Hyderabad, Pune, Bengaluru, Remote.">
+    <meta name="keywords" content="Data Analyst, Data Scientist, ML Engineer, AI Engineer, Business Analyst, Clinical Data Analyst, BI Analyst, MIS Analyst, Python, SQL, Power BI, AWS, Deloitte, Tata, Forage, Fresher, Immediate Joiner, Nashik, Hyderabad, Pune, Bengaluru, Remote, Medical AI, Healthcare Analytics">
+    <meta property="og:title" content="Abhijeet Gore | Data Scientist | ML Engineer | Immediate Joiner">
+    <meta property="og:description" content="Final-year Data Science student. 6 internships, 24+ certifications. Python, SQL, Power BI, AWS. Immediate Joiner.">
+    <meta property="og:url" content="https://abhijeetgore.me">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="responsive.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <style>
-        /* Mobile Responsiveness */
-        @media screen and (max-width: 768px) {
-            .nav-links {
-                position: absolute;
-                right: 0;
-                height: 100vh;
-                top: 0;
-                background-color: #fff;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
-                width: 60%;
-                transform: translateX(100%);
-                transition: transform 0.3s ease-in-out;
-                box-shadow: -2px 0 5px rgba(0,0,0,0.1);
-                z-index: 1000;
-            }
-            
-            .nav-links.active {
-                transform: translateX(0%);
-            }
-
-            .nav-links li {
-                margin: 20px 0;
-            }
-
-            .hamburger {
-                display: block !important;
-                z-index: 1001;
-                cursor: pointer;
-                font-size: 1.5rem;
-            }
-
-            .hero-container {
-                flex-direction: column-reverse;
-                text-align: center;
-                padding-top: 80px;
-            }
-
-            .hero-image {
-                width: 100%;
-                margin-bottom: 30px;
-                display: flex;
-                justify-content: center;
-            }
-            
-            .hero-image img {
-                max-width: 80%;
-                height: auto;
-            }
-
-            .about-content, .contact-content {
-                flex-direction: column;
-            }
-
-            .about-text, .education-timeline {
-                width: 100%;
-                margin-bottom: 30px;
-            }
-
-            .skills-grid, .projects-grid, .certificates-grid, .experience-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
+    <link rel="icon" type="image/png" href="https://via.placeholder.com/32x32/00468C/ffffff?text=AG">
 </head>
 <body>
     <!-- Navbar -->
@@ -90,7 +29,6 @@
                     <li><a href="#experience">Experience</a></li>
                     <li><a href="#projects">Projects</a></li>
                     <li><a href="#certificates">Certificates</a></li>
-                    <li><a href="#contact">Contact</a></li>
                 </ul>
                 <div class="hamburger">
                     <i class="fas fa-bars"></i>
@@ -102,56 +40,101 @@
     <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="container hero-container">
-            <div class="hero-content">
-                <h1>Hello, I'm <span class="highlight">Abhijeet Arun Gore</span></h1>
-                <p class="tagline">I am a <span class="typewriter"></span></p>
-                <div class="cta-buttons">
-                    <a href="#contact" class="btn btn-primary">Contact Me</a>
-                    <a href="#projects" class="btn btn-secondary">View Work</a>
+            <div class="hero-content" data-aos="fade-right">
+                <span class="open-to-work-badge"><i class="fas fa-briefcase"></i> Open to Work | Immediate Joiner</span>
+                <h1>I'm <span class="highlight">Abhijeet Gore</span></h1>
+                <p class="tagline">Final-year Computer Engineering Student | Data Science Honours | CGPA 8.14</p>
+                <p style="margin-bottom: 15px; color: rgba(255,255,255,0.85); font-size: 0.95rem;">Targeting: Data Analyst | Data Scientist | ML Engineer | AI Engineer | Business Analyst | Clinical Data Analyst | BI Analyst | MIS Analyst</p>
+                <div class="availability-strip" style="background: rgba(255,255,255,0.1); color: white; border: 1px dashed rgba(255,255,255,0.3); margin-bottom: 25px; display: inline-block; padding: 6px 16px; border-radius: 6px; font-size: 0.88rem;">
+                    <i class="fas fa-map-marker-alt" style="margin-right: 6px;"></i> Available: Hyderabad | Pune | Bengaluru | Remote | Immediate Joiner
+                </div>
+                <div class="cta-grid">
+                    <a href="#projects" class="btn-hero btn-projects">View Projects</a>
+                    <button onclick="navigator.clipboard.writeText('abhijeetarungore@gmail.com'); const btn = this; const orig = btn.innerHTML; btn.innerHTML = '<i class=\'fas fa-check\'></i> Copied!'; setTimeout(() => btn.innerHTML = orig, 2000);" class="btn-hero btn-email"><i class="fas fa-envelope"></i> Copy Email</button>
+                    <a href="https://www.linkedin.com/in/abhijeet-gore-972225282" target="_blank" class="btn-hero btn-linkedin"><i class="fab fa-linkedin-in"></i> LinkedIn</a>
                 </div>
             </div>
-            <div class="hero-image">
-                <img src="images/perf.jpg" alt="Abhijeet Gore" onerror="this.src='https://via.placeholder.com/400'">
+            <div class="hero-image" data-aos="fade-left">
+                <img src="images/perf1.png" alt="Abhijeet Gore" onerror="this.src='https://via.placeholder.com/400'">
             </div>
         </div>
     </section>
+
+    <!-- Metrics Strip -->
+    <div class="container">
+        <div class="metrics-strip" data-aos="zoom-in">
+            <div class="metrics-container">
+                <div class="metric-item">
+                    <h2>6</h2>
+                    <p>Internships</p>
+                </div>
+                <div class="metric-item">
+                    <h2>24+</h2>
+                    <p>Certifications</p>
+                </div>
+                <div class="metric-item">
+                    <h2>11+</h2>
+                    <p>Projects</p>
+                </div>
+                <div class="metric-item">
+                    <h2>8.14</h2>
+                    <p>CGPA</p>
+                </div>
+                <div class="metric-item">
+                    <h2>Selected</h2>
+                    <p>Zensar Program</p>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- About Section -->
     <section id="about" class="section" data-aos="fade-up">
         <div class="container">
             <h2 class="section-title">About Me</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <p>I am <strong>Abhijeet Arun Gore</strong>, a passionate Computer Engineering student specializing in Data Science and Machine Learning. With a strong foundation in Python and AI, I love solving complex problems through data. I actively participate in hackathons and internships to bridge the gap between theory and practice.</p>
-                    <ul class="about-details">
-                        <li><i class="fas fa-map-marker-alt" style="color: var(--primary-color); width: 25px;"></i> Maharashtra, India</li>
-                        <li><i class="fas fa-envelope" style="color: var(--primary-color); width: 25px;"></i> goreabhijeet137@gmail.com</li>
-                        <li><i class="fas fa-phone" style="color: var(--primary-color); width: 25px;"></i> +91 9403909309</li>
-                        <li><i class="fas fa-university" style="color: var(--primary-color); width: 25px;"></i> SNJB’s KBJ College of Engineering</li>
-                    </ul>
+            
+            <!-- Professional Summary Card (Full Width) -->
+            <div class="profile-summary-wrapper" style="max-width: 1000px; margin: 0 auto 40px auto;">
+                <div class="profile-summary-card">
+                    <h3 style="color: var(--primary-color); margin-bottom: 15px;"><i class="fas fa-user-graduate"></i> Professional Summary</h3>
+                    <p>Final-year Computer Engineering student pursuing Honours in Data Science at S.N.J.B. College of Engineering, Nashik (SPPU, 2027). CGPA 8.14/10. 12+ months of industry exposure through 6 internships including Zensar Technologies, AI Leela (OM Intelligence), AWS Academy, Altair, and Google for Developers — spanning Data Science, AI Development, Cloud Engineering, and Machine Learning. Completed Deloitte and Tata Group data analytics job simulations via Forage. Skilled in Python, SQL, Machine Learning, Power BI, Tableau, and AWS Cloud. Selected at Zensar Technologies. 24+ verified certifications from AWS, Oracle, Google, Deloitte, and Tata. Extensive experience using Git/GitHub, Jupyter, VS Code, MySQL Workbench, Power BI Desktop, Excel, Kaggle, and other industry-standard platforms.</p>
                 </div>
-                <div class="education-timeline">
-                    <h3>Education</h3>
-                    <div class="timeline-item">
-                        <span class="timeline-dot"></span>
-                        <span class="timeline-date">2023 – 2027 (Expected)</span>
-                        <h4>B.E. Computer Engineering</h4>
-                        <p>SNJB’s KBJ College of Engineering, Chandwad</p>
-                        <p>CGPA: 8.06/10</p>
+            </div>
+
+            <div class="about-content" style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px; align-items: start;">
+                <!-- Left: Quick Info Card -->
+                <div class="profile-summary-wrapper" data-aos="fade-right">
+                    <div class="profile-summary-card">
+                        <h3 style="color: var(--primary-color); margin-bottom: 20px;"><i class="fas fa-id-card"></i> Quick Info & Availability</h3>
+                        <ul class="about-details" style="display: block; grid-template-columns: 1fr;">
+                            <li style="margin-bottom: 18px;"><i class="fas fa-map-marker-alt" style="color: var(--primary-color); width: 25px;"></i> <strong>Available:</strong> Hyderabad | Pune | Bengaluru | Remote</li>
+                            <li style="margin-bottom: 18px;"><i class="fas fa-clock" style="color: var(--primary-color); width: 25px;"></i> <strong>Status:</strong> Immediate Joiner</li>
+                            <li style="margin-bottom: 18px;"><i class="fas fa-envelope" style="color: var(--primary-color); width: 25px;"></i> abhijeetarungore@gmail.com</li>
+                            <li style="margin-bottom: 18px;"><i class="fas fa-phone" style="color: var(--primary-color); width: 25px;"></i> +91 9403909309</li>
+                            <li><i class="fas fa-university" style="color: var(--primary-color); width: 25px;"></i> S.N.J.B. College of Engineering, Nashik</li>
+                        </ul>
                     </div>
-                    <div class="timeline-item">
-                        <span class="timeline-dot"></span>
-                        <span class="timeline-date">Jul 2020 – Jul 2022</span>
-                        <h4>Intermediate (11th–12th), Science</h4>
-                        <p>SRTMU, Nanded</p>
-                        <p>Grade: 71.33%</p>
-                    </div>
-                    <div class="timeline-item">
-                        <span class="timeline-dot"></span>
-                        <span class="timeline-date">Jul 2019 – Jul 2020</span>
-                        <h4>10th Standard</h4>
-                        <p>MSBSHSE</p>
-                        <p>Grade: 87.80%</p>
+                </div>
+
+                <!-- Right: Education Card -->
+                <div class="profile-summary-wrapper" data-aos="fade-left">
+                    <div class="profile-summary-card">
+                        <h3 style="color: var(--primary-color); margin-bottom: 20px;"><i class="fas fa-graduation-cap"></i> Education</h3>
+                        
+                        <div class="timeline-item" style="border-left: 2px solid var(--primary-color); padding-left: 15px; margin-bottom: 25px; position: relative;">
+                            <span style="font-size: 0.85rem; color: var(--text-light); font-weight: 600; display: block; margin-bottom: 5px;">2023 – 2027 (Expected)</span>
+                            <h4 style="font-size: 1.05rem; margin-bottom: 5px;">B.E. Computer Engineering (DS Honours)</h4>
+                            <p style="font-size: 0.9rem; margin-bottom: 3px;">S.N.J.B. College of Engineering, Nashik</p>
+                            <p style="font-size: 0.85rem; color: var(--text-light); margin-bottom: 5px;">Savitribai Phule Pune University (SPPU)</p>
+                            <strong style="color: var(--primary-color); font-size: 0.95rem;">CGPA: 8.14/10</strong>
+                        </div>
+
+                        <div class="timeline-item" style="border-left: 2px solid #cbd5e1; padding-left: 15px; position: relative;">
+                            <span style="font-size: 0.85rem; color: var(--text-light); font-weight: 600; display: block; margin-bottom: 5px;">2020 – 2022</span>
+                            <h4 style="font-size: 1.05rem; margin-bottom: 5px;">Higher Secondary (HSC — Science)</h4>
+                            <p style="font-size: 0.9rem; margin-bottom: 3px;">Karmayogi Tulsiram Pawar Mahavidyalaya, Latur</p>
+                            <p style="font-size: 0.85rem; color: var(--text-light);">Maharashtra State Board | 71.33%</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -159,35 +142,42 @@
     </section>
 
     <!-- Skills Section -->
-    <section id="skills" class="section" data-aos="fade-up">
+    <section id="skills" class="section bg-light" data-aos="fade-up">
         <div class="container">
-            <h2 class="section-title">My Skills</h2>
-            <div class="skills-grid">
-                <div class="skill-card">
-                    <i class="fab fa-python"></i>
-                    <h3>Python</h3>
+            <h2 class="section-title">Technical Skills</h2>
+
+            <div style="margin-bottom: 40px;">
+                <h3 style="margin-bottom: 20px; color: var(--primary-color);">Languages & Databases</h3>
+                <div class="skills-container">
+                    <span class="skill-tag">Python</span><span class="skill-tag">SQL</span><span class="skill-tag">PL/SQL</span><span class="skill-tag">MySQL</span><span class="skill-tag">Query Optimization</span><span class="skill-tag">Aggregate Functions</span><span class="skill-tag">Constraints</span>
                 </div>
-                <div class="skill-card">
-                    <i class="fas fa-brain"></i>
-                    <h3>AI/ML</h3>
+            </div>
+
+            <div style="margin-bottom: 40px;">
+                <h3 style="margin-bottom: 20px; color: var(--primary-color);">Data Science & Statistics</h3>
+                <div class="skills-container">
+                    <span class="skill-tag">EDA</span><span class="skill-tag">Feature Engineering</span><span class="skill-tag">Data Wrangling</span><span class="skill-tag">Data Profiling</span><span class="skill-tag">Data Aggregation</span><span class="skill-tag">Missing Value Treatment</span><span class="skill-tag">Outlier Detection</span><span class="skill-tag">Data Modeling</span><span class="skill-tag">Statistical Analysis</span><span class="skill-tag">Hypothesis Testing</span><span class="skill-tag">Confusion Matrix</span><span class="skill-tag">Precision, Recall, F1</span><span class="skill-tag">ROC-AUC</span><span class="skill-tag">MSE, RMSE, MAE, R2</span><span class="skill-tag">Correlation & Covariance</span><span class="skill-tag">Normal Distribution</span><span class="skill-tag">Probability</span><span class="skill-tag">Pandas</span><span class="skill-tag">NumPy</span>
                 </div>
-                <div class="skill-card">
-                    <i class="fas fa-database"></i>
-                    <h3>Data Science</h3>
+            </div>
+
+            <div style="margin-bottom: 40px;">
+                <h3 style="margin-bottom: 20px; color: var(--primary-color);">Machine Learning</h3>
+                <div class="skills-container">
+                    <span class="skill-tag">Predictive Modeling</span><span class="skill-tag">Linear Regression</span><span class="skill-tag">Logistic Regression</span><span class="skill-tag">Decision Trees</span><span class="skill-tag">Random Forest</span><span class="skill-tag">XGBoost</span><span class="skill-tag">Support Vector Machine</span><span class="skill-tag">K-Nearest Neighbors</span><span class="skill-tag">Naive Bayes</span><span class="skill-tag">K-Means Clustering</span><span class="skill-tag">Hierarchical Clustering</span><span class="skill-tag">Bias-Variance Tradeoff</span><span class="skill-tag">Cross Validation</span><span class="skill-tag">Hyperparameter Tuning</span><span class="skill-tag">Feature Selection</span><span class="skill-tag">Model Evaluation</span><span class="skill-tag">Scikit-learn</span><span class="skill-tag">NLP</span><span class="skill-tag">Time Series</span>
                 </div>
-                <div class="skill-card">
-                    <i class="fas fa-code"></i>
-                    <h3>Web Dev</h3>
-                    <p>HTML/CSS/JS/MERN</p>
+            </div>
+
+            <div style="margin-bottom: 40px;">
+                <h3 style="margin-bottom: 20px; color: var(--primary-color);">BI & Visualization</h3>
+                <div class="skills-container">
+                    <span class="skill-tag">Power BI</span><span class="skill-tag">Tableau</span><span class="skill-tag">DAX (Basic)</span><span class="skill-tag">Dashboard Design</span><span class="skill-tag">Business Reporting</span><span class="skill-tag">Performance Tracking</span><span class="skill-tag">KPI Analysis</span><span class="skill-tag">Trend Analysis</span><span class="skill-tag">Visual Analytics</span><span class="skill-tag">Data Storytelling</span><span class="skill-tag">Matplotlib</span><span class="skill-tag">Seaborn</span>
                 </div>
-                <div class="skill-card">
-                    <i class="fas fa-cloud"></i>
-                    <h3>Cloud</h3>
-                    <p>OCI/AWS</p>
-                </div>
-                <div class="skill-card">
-                    <i class="fas fa-chart-bar"></i>
-                    <h3>Data Viz</h3>
+            </div>
+
+            <div style="margin-bottom: 40px;">
+                <h3 style="margin-bottom: 20px; color: var(--primary-color);">Domain Knowledge</h3>
+                <div class="skills-container">
+                    <span class="skill-tag">Customer Churn Analysis</span><span class="skill-tag">Sales Analytics</span><span class="skill-tag">Business Analytics</span><span class="skill-tag">Predictive Analytics</span><span class="skill-tag">Financial Fraud Detection</span><span class="skill-tag">Medical Report Analysis</span><span class="skill-tag">Healthcare Analytics</span><span class="skill-tag">Adaptive Learning Systems</span><span class="skill-tag">API Integration</span>
                 </div>
             </div>
         </div>
@@ -196,40 +186,130 @@
     <!-- Experience Section -->
     <section id="experience" class="section" data-aos="fade-up">
         <div class="container">
-            <h2 class="section-title">Internships & Experience</h2>
-            <div class="experience-grid">
-                <div class="experience-card">
-                    <h3>UK Valley Technology</h3>
-                    <span class="role">Web Developer Intern</span>
-                    <ul>
-                        <li>Worked on responsive UI design and basic web functionality.</li>
-                        <li>Improved front-end performance and user experience.</li>
-                        <li>Collaborated with the development team.</li>
+            <h2 class="section-title">Professional Experience</h2>
+            <p style="font-size: 0.82rem; color: #94a3b8; font-style: italic; margin-bottom: 25px; margin-top: -10px;">All internships and experience can be independently verified on LinkedIn: <a href="https://www.linkedin.com/in/abhijeet-gore-972225282" target="_blank" style="color: var(--primary-color);">linkedin.com/in/abhijeet-gore-972225282</a></p>
+            <div class="timeline">
+
+                <!-- AWS Data Engineering -->
+                <div class="timeline-item" data-aos="fade-left">
+                    <div class="timeline-header">
+                        <div class="company-logo">AICTE EduSkills + AWS Academy</div>
+                        <span class="duration">Apr 2026 – Jun 2026</span>
+                    </div>
+                    <span class="role">Data Engineering Intern <span class="experience-grade">Grade: O (Outstanding 90–100%)</span></span>
+                    <ul class="experience-list">
+                        <li>Built ETL pipelines and managed data infrastructure using AWS Cloud services at scale.</li>
+                        <li>Worked with cloud storage, databases, compute, and data processing services on AWS Academy curriculum.</li>
+                        <li>Certificate ID: 4a0e93a2e001512a97b3</li>
+                    </ul>
+                    <p style="font-size: 0.8rem; color: #94a3b8; font-style: italic; margin-top: 10px;">To verify, refer LinkedIn: linkedin.com/in/abhijeet-gore-972225282</p>
+                </div>
+
+                <!-- Zensar -->
+                <div class="timeline-item" data-aos="fade-left">
+                    <div class="timeline-header">
+                        <div class="company-logo">Zensar Technologies</div>
+                        <span class="duration">Mar 2026 – Apr 2026</span>
+                    </div>
+                    <span class="role">Data Science & Python Trainee | Nashik, India</span>
+                    <p style="margin: 8px 0; font-weight: 600; color: var(--primary-color); font-size: 0.9rem;">Achievement: Selected for Program</p>
+                    <ul class="experience-list">
+                        <li>Advanced Python (OOP, classes, inheritance, encapsulation, polymorphism, exception handling) applied to industry case studies.</li>
+                        <li>SQL & PL/SQL (joins, window functions, stored procedures).</li>
+                        <li>Performed EDA, data cleaning, data validation, and statistical analysis for business documentation.</li>
+                    </ul>
+                    <p style="font-size: 0.8rem; color: #94a3b8; font-style: italic; margin-top: 10px;">To verify, refer LinkedIn: linkedin.com/in/abhijeet-gore-972225282</p>
+                </div>
+
+                <!-- AI Leela -->
+                <div class="timeline-item" data-aos="fade-left">
+                    <div class="timeline-header">
+                        <div class="company-logo">AI Leela (OM Intelligence)</div>
+                        <span class="duration">Dec 30, 2025 – Feb 15, 2026</span>
+                    </div>
+                    <span class="role">Python Development Intern <span class="experience-grade" style="background:#eef2ff; color:#00468C;">Industry Internship</span></span>
+                    <ul class="experience-list">
+                        <li>Developed AI-driven application logic using Python to extract and analyze medical report data.</li>
+                        <li>Implemented data processing pipelines for document analysis and patient-friendly insight generation.</li>
+                        <li>Built interactive logic for historical trend comparison and health metric visualization.</li>
+                        <li>Practiced real-world software development workflows and algorithm implementation.</li>
+                    </ul>
+                    <div class="project-tags" style="margin-top: 12px;">
+                        <span class="tag">Python</span><span class="tag">AI Analysis</span>
+                    </div>
+                    <p style="font-size: 0.8rem; color: #94a3b8; font-style: italic; margin-top: 10px;">To verify, refer LinkedIn: linkedin.com/in/abhijeet-gore-972225282</p>
+                </div>
+
+                <!-- Deloitte Forage -->
+                <div class="timeline-item" data-aos="fade-left">
+                    <div class="timeline-header">
+                        <div class="company-logo">Deloitte Australia (via Forage)</div>
+                        <span class="duration">Nov 2025</span>
+                    </div>
+                    <span class="role">Data Analytics Virtual Job Simulation <span class="experience-grade" style="background:#e0f2fe; color:#1e40af;">Industry Simulation — Verified</span></span>
+                    <ul class="experience-list">
+                        <li>Data analytics tasks simulating real consulting workflows — data interpretation and business insight generation.</li>
+                        <li><a href="https://www.theforage.com/completion-certificates/9PBTqmSxAf6zZTseP/io9DzWKe3PTsiS6GG_9PBTqmSxAf6zZTseP_NXp7KzAtpdQ3epcio_1762879409889_completion_certificate.pdf" target="_blank" style="color:var(--primary-color); font-weight:600;">Credential ID: 9gfczgpuvhcDHFY53 — View Certificate</a></li>
                     </ul>
                 </div>
-                <div class="experience-card">
-                    <h3>AICTE Eduskills</h3>
-                    <span class="role">AI/ML & Data Science Intern</span>
-                    <ul>
-                        <li>Completed AI/ML Internship (Virtual).</li>
-                        <li>Completed Data Science Internship (Altair).</li>
-                        <li>Gained hands-on experience in applied technologies.</li>
+
+                <!-- AWS Cloud GenAI -->
+                <div class="timeline-item" data-aos="fade-left">
+                    <div class="timeline-header">
+                        <div class="company-logo">AICTE EduSkills + AWS Academy</div>
+                        <span class="duration">Jul 2025 – Sep 2025</span>
+                    </div>
+                    <span class="role">Generative AI Intern <span class="experience-grade">Grade: O (Outstanding 90–100%)</span></span>
+                    <ul class="experience-list">
+                        <li>Worked on Generative AI solutions and model evaluation strategies.</li>
+                        <li>Leveraged AI foundations for building automated insight engines.</li>
+                        <li>Certificate ID: 2dadcdb4c217c5de3bf2c6a6b0ad99d3</li>
+                    </ul>
+                    <p style="font-size: 0.8rem; color: #94a3b8; font-style: italic; margin-top: 10px;">To verify, refer LinkedIn: linkedin.com/in/abhijeet-gore-972225282</p>
+                </div>
+
+                <!-- Altair Data Science -->
+                <div class="timeline-item" data-aos="fade-left">
+                    <div class="timeline-header">
+                        <div class="company-logo">AICTE EduSkills + Altair</div>
+                        <span class="duration">Apr 2025 – Jun 2025</span>
+                    </div>
+                    <span class="role">Data Science Intern <span class="experience-grade">Grade: C (Fair)</span></span>
+                    <ul class="experience-list">
+                        <li>Applied Python, Pandas, and Scikit-learn for predictive modeling and EDA.</li>
+                        <li>Developed feature engineering pipelines and interactive data visualizations.</li>
+                        <li>Certificate ID: db21b05099902d01efdc4740d07d1fab</li>
+                    </ul>
+                    <p style="font-size: 0.8rem; color: #94a3b8; font-style: italic; margin-top: 10px;">To verify, refer LinkedIn: linkedin.com/in/abhijeet-gore-972225282</p>
+                </div>
+
+                <!-- Tata Forage -->
+                <div class="timeline-item" data-aos="fade-left">
+                    <div class="timeline-header">
+                        <div class="company-logo">Tata Group (via Forage)</div>
+                        <span class="duration">Feb 2025</span>
+                    </div>
+                    <span class="role">Data Visualisation Job Simulation <span class="experience-grade" style="background:#e0f2fe; color:#1e40af;">Industry Simulation — Verified</span></span>
+                    <ul class="experience-list">
+                        <li>Created data visualizations and dashboards for business stakeholders communicating complex insights.</li>
+                        <li><a href="https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/ifobHAoMjQs9s6bKS/MyXvBcppsW2FkNYCX_ifobHAoMjQs9s6bKS_NXp7KzAtpdQ3epcio_1738598158650_completion_certificate.pdf" target="_blank" style="color:var(--primary-color); font-weight:600;">Credential ID: uGz88ZzRS84WeQdKn — View Certificate</a></li>
                     </ul>
                 </div>
-                
-                <div class="experience-card">
-                    <h3>Deloitte Australia</h3>
-                    <span class="role">Data Analytics Job Simulation</span>
-                    <ul>
-                        <li>Completed practical tasks in data analytics.</li>
-                        <li>Simulated real-world job scenarios.</li>
+
+                <!-- Google AI/ML -->
+                <div class="timeline-item" data-aos="fade-left">
+                    <div class="timeline-header">
+                        <div class="company-logo">AICTE EduSkills + Google for Developers</div>
+                        <span class="duration">Jul 2024 – Sep 2024</span>
+                    </div>
+                    <span class="role">AI/ML Intern <span class="experience-grade">Grade: P (Pass)</span></span>
+                    <ul class="experience-list">
+                        <li>Focused on Classification, Regression, and Model Evaluation using Python and Scikit-learn.</li>
+                        <li>Participated in the India Edu Program by Google for Developers.</li>
+                        <li>Certificate ID: 72ee7a5b75978470a03bb5d9fd9e9e3f</li>
                     </ul>
+                    <p style="font-size: 0.8rem; color: #94a3b8; font-style: italic; margin-top: 10px;">To verify, refer LinkedIn: linkedin.com/in/abhijeet-gore-972225282</p>
                 </div>
-            </div>
-            <div style="text-align: center; margin-top: 40px;">
-                <a href="https://www.linkedin.com/in/abhijeet-gore-972225282/details/experience/" target="_blank" class="btn btn-primary">
-                    View All Experience on LinkedIn <i class="fab fa-linkedin"></i>
-                </a>
             </div>
         </div>
     </section>
@@ -239,232 +319,246 @@
         <div class="container">
             <h2 class="section-title">Projects</h2>
             <div class="projects-grid">
-                <div class="project-card js-tilt">
-                    <div class="card-image">
-                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=600&q=80" alt="Sales Analysis">
-                    </div>
-                    <div class="card-content">
-                        <h3>Sales Data Analysis & Visualization</h3>
-                        <p class="tech-stack">Python, Pandas, Matplotlib, Seaborn</p>
-                        <p>End-to-end analysis transforming raw sales data into KPI-driven insights using data cleaning, aggregation, and business-focused visualizations to support decision-making.</p>
-                        <a href="https://github.com/AbhijeetArunGore/Sales_Data_Analysis_and_Visualization-Pandas-Matplotlib-Seaborn" target="_blank" class="btn-link">View Project <i class="fas fa-arrow-right"></i></a>
+
+                <!-- Project 1 — FEATURED (MediAnalyze Pro) -->
+                <div class="project-card" data-aos="zoom-in" style="border: 2px solid var(--primary-color); position: relative;">
+                    <div style="position: absolute; top: -15px; left: 20px; background: var(--primary-color); color: white; font-size: 0.72rem; font-weight: 600; padding: 3px 12px; border-radius: 20px; z-index: 10;">AI + Data Science | Capstone</div>
+                    <div class="project-info">
+                        <h3>MediAnalyze Pro — Medical Report Analyzer</h3>
+                        <div class="project-tags">
+                            <span class="tag">Python</span><span class="tag">AI Analysis</span><span class="tag">Data Extraction</span>
+                        </div>
+                        <p>AI-driven application that analyzes uploaded PDF medical reports — generates patient-friendly health insights, test interpretations, lifestyle advice, and tracks historical trends.</p>
+                        <div style="display: flex; flex-wrap: wrap; gap: 6px; margin: 10px 0;">
+                            <span style="font-size: 0.75rem; background: #eef2ff; color: #00468C; padding: 3px 8px; border-radius: 4px; border: 1px solid #d0d7de;">Text Extraction</span>
+                            <span style="font-size: 0.75rem; background: #eef2ff; color: #00468C; padding: 3px 8px; border-radius: 4px; border: 1px solid #d0d7de;">AI-Powered Analysis</span>
+                            <span style="font-size: 0.75rem; background: #eef2ff; color: #00468C; padding: 3px 8px; border-radius: 4px; border: 1px solid #d0d7de;">Trend Tracking</span>
+                        </div>
+                        <div style="margin-top: auto; padding-top: 15px;">
+                            <p style="font-size: 0.78rem; color: #94a3b8; font-style: italic; margin-bottom: 10px;">Built during AI Leela (OM Intelligence) internship — Dec 2025 to Feb 2026</p>
+                            <a href="https://github.com/AbhijeetArunGore/medical_report_analysis_project" target="_blank" class="btn-link" style="color: var(--primary-color); font-weight: 600;">GitHub Repository <i class="fab fa-github"></i></a>
+                        </div>
                     </div>
                 </div>
-                <div class="project-card js-tilt">
-                    <div class="card-image">
-                        <img src="https://images.unsplash.com/photo-1518546305927-5a555bb7020d?auto=format&fit=crop&w=600&q=80" alt="Bitcoin Prediction">
-                    </div>
-                    <div class="card-content">
-                        <h3>ML-based Bitcoin Prediction</h3>
-                        <p class="tech-stack">Python, ML</p>
-                        <p>ML-driven system using indicators like Supertrend, EMA, and RSI for breakout detection.</p>
-                        <a href="https://github.com/AbhijeetArunGore" target="_blank" class="btn-link">View Project <i class="fas fa-arrow-right"></i></a>
+
+                <!-- Project 2 -->
+                <div class="project-card" data-aos="zoom-in">
+                    <div class="project-info">
+                        <h3>Customer Churn Prediction</h3>
+                        <div class="project-tags">
+                            <span class="tag">Python</span><span class="tag">SQL</span><span class="tag">Power BI</span><span class="tag">Scikit-learn</span>
+                        </div>
+                        <p>End-to-end churn prediction pipeline combining SQL data extraction, Python ML modeling, and Power BI KPI dashboard for business stakeholders.</p>
+                        <div style="margin-top: auto; padding-top: 15px;">
+                            <a href="https://github.com/AbhijeetArunGore/customer-churn-prediction-sql-python-powerbi" target="_blank" class="btn-link" style="color: var(--primary-color); font-weight: 600;">GitHub Repository <i class="fab fa-github"></i></a>
+                        </div>
                     </div>
                 </div>
-                <div class="project-card js-tilt">
-                    <div class="card-image">
-                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&q=80" alt="Telecom Churn">
-                    </div>
-                    <div class="card-content">
+
+                <!-- Project 3 -->
+                <div class="project-card" data-aos="zoom-in">
+                    <div class="project-info">
                         <h3>Telecom Churn Dashboard</h3>
-                        <p class="tech-stack">Python, ML, Streamlit</p>
-                        <p>A simple and interactive Machine Learning web app that predicts customer churn. Built using Python, ML models, and Streamlit. This project shows my skills in data cleaning, feature engineering, and model deployment.</p>
-                        <a href="https://github.com/AbhijeetArunGore" target="_blank" class="btn-link">View Project <i class="fas fa-arrow-right"></i></a>
+                        <div class="project-tags">
+                            <span class="tag">XGBoost</span><span class="tag">Random Forest</span><span class="tag">Power BI</span>
+                        </div>
+                        <p>Benchmarked multiple classifiers for telecom customer churn; built interactive Power BI dashboard surfacing retention KPIs.</p>
+                        <div style="margin-top: auto; padding-top: 15px;">
+                            <a href="https://github.com/AbhijeetArunGore/Telecom-Churn-Dashboard" target="_blank" class="btn-link" style="color: var(--primary-color); font-weight: 600;">GitHub Repository <i class="fab fa-github"></i></a>
+                        </div>
                     </div>
                 </div>
-                <div class="project-card js-tilt">
-                    <div class="card-image">
-                        <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=600&q=80" alt="Smart Screen">
-                    </div>
-                    <div class="card-content">
-                        <h3>Smart Screen Brightness</h3>
-                        <p class="tech-stack">Python, OpenCV, ML</p>
-                        <p>Adjusts screen brightness automatically based on real-time face detection.</p>
-                        <a href="https://github.com/AbhijeetArunGore" target="_blank" class="btn-link">View Project <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
-                <div class="project-card js-tilt">
-                    <div class="card-image">
-                        <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=600&q=80" alt="Fraud Detection">
-                    </div>
-                    <div class="card-content">
-                        <h3>Fraud Detection Pipeline</h3>
-                        <p class="tech-stack">Jupyter, Python</p>
-                        <p>Extensive data cleaning and processing pipeline for financial fraud detection.</p>
-                        <a href="https://github.com/AbhijeetArunGore" target="_blank" class="btn-link">View Project <i class="fas fa-arrow-right"></i></a>
+
+                <!-- Project 4 -->
+                <div class="project-card" data-aos="zoom-in">
+                    <div class="project-info">
+                        <h3>Financial Fraud Detection</h3>
+                        <div class="project-tags">
+                            <span class="tag">Python</span><span class="tag">Pandas</span><span class="tag">Outlier Detection</span>
+                        </div>
+                        <p>Production-ready preprocessing pipeline; missing value treatment, IQR/Z-score outlier detection, and feature transformation for fraud analytics.</p>
+                        <div style="margin-top: auto; padding-top: 15px;">
+                            <a href="https://github.com/AbhijeetArunGore/Fraud_Detection_Jupyter_Data_Cleaning_Processing" target="_blank" class="btn-link" style="color: var(--primary-color); font-weight: 600;">GitHub Repository <i class="fab fa-github"></i></a>
+                        </div>
                     </div>
                 </div>
-                <div class="project-card js-tilt">
-                    <div class="card-image">
-                        <img src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=600&q=80" alt="Airline Analysis">
-                    </div>
-                    <div class="card-content">
-                        <h3>Airline Data Analysis</h3>
-                        <p class="tech-stack">Python, Pandas, Matplotlib</p>
-                        <p>Analyzed yearly trends and growth patterns in airline passenger data.</p>
-                        <a href="https://github.com/AbhijeetArunGore" target="_blank" class="btn-link">View Project <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
-                <div class="project-card js-tilt">
-                    <div class="card-image">
-                        <img src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?auto=format&fit=crop&w=600&q=80" alt="News App">
-                    </div>
-                    <div class="card-content">
-                        <h3>News App</h3>
-                        <p class="tech-stack">React, JavaScript</p>
-                        <p>Dynamic news application featuring real-time fetching and responsive UI.</p>
-                        <a href="https://github.com/AbhijeetArunGore" target="_blank" class="btn-link">View Project <i class="fas fa-arrow-right"></i></a>
+
+                <!-- Project 5 -->
+                <div class="project-card" data-aos="zoom-in">
+                    <div class="project-info">
+                        <h3>Sales Data Analysis & KPI Dashboard</h3>
+                        <div class="project-tags">
+                            <span class="tag">Matplotlib</span><span class="tag">Seaborn</span><span class="tag">Statistical Analysis</span>
+                        </div>
+                        <p>Multi-dimensional analysis surfacing revenue trends, seasonal patterns, and actionable KPI recommendations via interactive dashboards.</p>
+                        <div style="margin-top: auto; padding-top: 15px;">
+                            <a href="https://github.com/AbhijeetArunGore/Sales_Data_Analysis_and_Visualization-Pandas-Matplotlib-Seaborn" target="_blank" class="btn-link" style="color: var(--primary-color); font-weight: 600;">GitHub Repository <i class="fab fa-github"></i></a>
+                        </div>
                     </div>
                 </div>
-                <div class="project-card js-tilt">
-                    <div class="card-image">
-                        <img src="https://images.unsplash.com/photo-1586281380349-632531db7ed4?auto=format&fit=crop&w=600&q=80" alt="Resume Generator">
-                    </div>
-                    <div class="card-content">
-                        <h3>Resume Generator</h3>
-                        <p class="tech-stack">JavaScript, HTML</p>
-                        <p>Web-based tool to generate professional resumes dynamically.</p>
-                        <a href="https://github.com/AbhijeetArunGore" target="_blank" class="btn-link">View Project <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
-                <div class="project-card js-tilt">
-                    <div class="card-image">
-                        <img src="https://images.unsplash.com/photo-1501183638710-841dd1904471?auto=format&fit=crop&w=600&q=80" alt="Airbnb UI">
-                    </div>
-                    <div class="card-content">
-                        <h3>Airbnb Mobile UI Design</h3>
-                        <p class="tech-stack">Figma, Canva</p>
-                        <p>Designed a mobile-friendly Airbnb-style app UI including login and home screens.</p>
-                        <a href="https://github.com/AbhijeetArunGore" target="_blank" class="btn-link">View Project <i class="fas fa-arrow-right"></i></a>
+
+                <!-- Project 6 -->
+                <div class="project-card" data-aos="zoom-in">
+                    <div class="project-info">
+                        <h3>Smart Screen (Own Idea)</h3>
+                        <div class="project-tags">
+                            <span class="tag">Python</span><span class="tag">Applied ML</span>
+                        </div>
+                        <p>Original ML project concept built independently — demonstrates initiative, creative problem-solving, and applied ML thinking beyond coursework.</p>
+                        <div style="margin-top: auto; padding-top: 15px;">
+                            <a href="https://github.com/AbhijeetArunGore/Smart_Screen_Python_ML_Own_Idea" target="_blank" class="btn-link" style="color: var(--primary-color); font-weight: 600;">GitHub Repository <i class="fab fa-github"></i></a>
+                        </div>
                     </div>
                 </div>
-                <!-- See More Card -->
-                <div class="project-card js-tilt" style="display: flex; align-items: center; justify-content: center; background: var(--primary-color); color: white;">
-                    <div class="card-content" style="text-align: center;">
-                        <i class="fab fa-github" style="font-size: 4rem; margin-bottom: 15px; color: white;"></i>
-                        <h3 style="color: white;">See More on GitHub</h3>
-                        <p style="color: rgba(255,255,255,0.8); margin-bottom: 20px;">Check out all my repositories and source code.</p>
-                        <a href="https://github.com/AbhijeetArunGore" target="_blank" class="btn btn-secondary" style="background: white; color: var(--primary-color); border: none;">Visit Profile</a>
+
+                <!-- Project 7 -->
+                <div class="project-card" data-aos="zoom-in">
+                    <div class="project-info">
+                        <h3>Math Adventures — Adaptive Learning Engine</h3>
+                        <div class="project-tags">
+                            <span class="tag">Adaptive Algorithms</span><span class="tag">Educational AI</span>
+                        </div>
+                        <p>Adaptive learning engine that personalizes math problem difficulty based on user performance — demonstrates algorithm design and educational AI concepts.</p>
+                        <div style="margin-top: auto; padding-top: 15px;">
+                            <a href="https://github.com/AbhijeetArunGore/Math-Adventures-Adaptive-Learning-Engine" target="_blank" class="btn-link" style="color: var(--primary-color); font-weight: 600;">GitHub Repository <i class="fab fa-github"></i></a>
+                        </div>
                     </div>
                 </div>
+
+                <!-- Project 8 -->
+                <div class="project-card" data-aos="zoom-in">
+                    <div class="project-info">
+                        <h3>Data Analysis Projects Collection</h3>
+                        <div class="project-tags">
+                            <span class="tag">EDA</span><span class="tag">Visualization</span><span class="tag">Pandas</span>
+                        </div>
+                        <p>Collection of data analysis case studies covering EDA, visualization, and statistical analysis across multiple real-world datasets.</p>
+                        <div style="margin-top: auto; padding-top: 15px;">
+                            <a href="https://github.com/AbhijeetArunGore/Data-Analysis-Projects" target="_blank" class="btn-link" style="color: var(--primary-color); font-weight: 600;">GitHub Repository <i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 9 -->
+                <div class="project-card" data-aos="zoom-in">
+                    <div class="project-info">
+                        <h3>Foundational Data Science Projects</h3>
+                        <div class="project-tags">
+                            <span class="tag">Scikit-learn</span><span class="tag">ML Concepts</span>
+                        </div>
+                        <p>Core ML concepts — preprocessing, classification, regression, and model building projects for foundational data science understanding.</p>
+                        <div style="margin-top: auto; padding-top: 15px;">
+                            <a href="https://github.com/AbhijeetArunGore/Basic-Data-Science-project" target="_blank" class="btn-link" style="color: var(--primary-color); font-weight: 600;">GitHub Repository <i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 10 -->
+                <div class="project-card" data-aos="zoom-in">
+                    <div class="project-info">
+                        <h3>Python API Basics</h3>
+                        <div class="project-tags">
+                            <span class="tag">JSON Handling</span><span class="tag">Python</span>
+                        </div>
+                        <p>Practical exploration of application integration using Python — data fetching, parsing, and JSON response handling.</p>
+                        <div style="margin-top: auto; padding-top: 15px;">
+                            <a href="https://github.com/AbhijeetArunGore/python-api-basics" target="_blank" class="btn-link" style="color: var(--primary-color); font-weight: 600;">GitHub Repository <i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 11 -->
+                <div class="project-card" data-aos="zoom-in">
+                    <div class="project-info">
+                        <h3>All-in-One Python Concepts</h3>
+                        <div class="project-tags">
+                            <span class="tag">OOP</span><span class="tag">DSA</span><span class="tag">Advanced Python</span>
+                        </div>
+                        <p>Comprehensive Python reference covering OOP, data structures, algorithms, and advanced programming concepts.</p>
+                        <div style="margin-top: auto; padding-top: 15px;">
+                            <a href="https://github.com/AbhijeetArunGore/All-in-one-python-concepts" target="_blank" class="btn-link" style="color: var(--primary-color); font-weight: 600;">GitHub Repository <i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
 
-    <!-- Certificates Section -->
+    <!-- Certifications Section -->
     <section id="certificates" class="section" data-aos="fade-up">
         <div class="container">
-            <h2 class="section-title">Certificates</h2>
-            <div class="certificates-grid">
-                <div class="cert-card js-tilt">
-                    <div class="cert-icon"><i class="fab fa-aws"></i></div>
-                    <div class="cert-info">
-                        <h3>AWS Educate Introduction to Generative AI</h3>
-                        <p class="issuer">AWS Educate - Training Badge</p>
-                        <p class="date">Issued: Jan 2026</p>
-                        <a href="https://www.credly.com/badges/b04e3e68-6289-494d-af39-f1f258ebe639" target="_blank" class="btn-sm">Show Credential</a>
-                    </div>
-                </div>
-                <div class="cert-card js-tilt">
-                    <div class="cert-icon"><i class="fas fa-chart-line"></i></div>
-                    <div class="cert-info">
-                        <h3>Data Analytics Job Simulation</h3>
-                        <p class="issuer">Deloitte Australia (Forage)</p>
-                        <p class="date">Issued: Nov 2025</p>
-                        <a href="https://www.linkedin.com/in/abhijeet-gore-972225282/details/certifications/" target="_blank" class="btn-sm">Show Credential</a>
-                    </div>
-                </div>
-                <div class="cert-card js-tilt">
-                    <div class="cert-icon"><i class="fab fa-aws"></i></div>
-                    <div class="cert-info">
-                        <h3>AWS Academy Graduate</h3>
-                        <p class="issuer">Machine Learning Foundations</p>
-                        <p class="date">Issued: Sep 2025</p>
-                        <a href="https://www.linkedin.com/in/abhijeet-gore-972225282/details/certifications/" target="_blank" class="btn-sm">Show Credential</a>
-                    </div>
-                </div>
-                <div class="cert-card js-tilt">
-                    <div class="cert-icon"><i class="fas fa-brain"></i></div>
-                    <div class="cert-info">
-                        <h3>Data Science & ML with Python</h3>
-                        <p class="issuer">Udemy</p>
-                        <p class="date">Issued: Mar 2025</p>
-                        <a href="https://www.linkedin.com/in/abhijeet-gore-972225282/details/certifications/" target="_blank" class="btn-sm">Show Credential</a>
-                    </div>
-                </div>
-                <div class="cert-card js-tilt">
-                    <div class="cert-icon"><i class="fas fa-code"></i></div>
-                    <div class="cert-info">
-                        <h3>Data Analysis with Python</h3>
-                        <p class="issuer">Scaler</p>
-                        <p class="date">Issued: Feb 2025</p>
-                        <a href="https://www.linkedin.com/in/abhijeet-gore-972225282/details/certifications/" target="_blank" class="btn-sm">Show Credential</a>
-                    </div>
-                </div>
-                <div class="cert-card js-tilt">
-                    <div class="cert-icon"><i class="fas fa-chart-pie"></i></div>
-                    <div class="cert-info">
-                        <h3>Data Visualization Job Simulation</h3>
-                        <p class="issuer">Tata Group (Forage)</p>
-                        <p class="date">Issued: Feb 2025</p>
-                        <a href="https://www.linkedin.com/in/abhijeet-gore-972225282/details/certifications/" target="_blank" class="btn-sm">Show Credential</a>
-                    </div>
-                </div>
-                <div class="cert-card js-tilt">
-                    <div class="cert-icon"><i class="fas fa-database"></i></div>
-                    <div class="cert-info">
-                        <h3>Foundations: Data, Data, Everywhere</h3>
-                        <p class="issuer">United Latino Students Association</p>
-                        <p class="date">Issued: Nov 2024</p>
-                        <a href="https://www.linkedin.com/in/abhijeet-gore-972225282/details/certifications/" target="_blank" class="btn-sm">Show Credential</a>
-                    </div>
-                </div>
-                <div class="cert-card js-tilt">
-                    <div class="cert-icon"><i class="fab fa-microsoft"></i></div>
-                    <div class="cert-info">
-                        <h3>Power BI Fundamentals</h3>
-                        <p class="issuer">Office Master</p>
-                        <p class="date">Issued: Nov 2024</p>
-                        <a href="https://www.linkedin.com/in/abhijeet-gore-972225282/details/certifications/" target="_blank" class="btn-sm">Show Credential</a>
-                    </div>
-                </div>
+            <h2 class="section-title">Certifications & Badges</h2>
+            <p style="font-size: 0.82rem; color: #94a3b8; font-style: italic; margin-bottom: 30px; margin-top: -10px;">All certifications can be independently verified on LinkedIn: <a href="https://www.linkedin.com/in/abhijeet-gore-972225282" target="_blank" style="color: var(--primary-color);">linkedin.com/in/abhijeet-gore-972225282</a> — Navigate to the Licenses &amp; Certifications section.</p>
+
+            <h3 style="margin-bottom: 20px; color: var(--primary-color); border-bottom: 2px solid #eef2ff; padding-bottom: 10px;">AWS Academy Graduate (Credly Verified)</h3>
+            <div class="cert-grid" style="margin-bottom: 40px;">
+                <div class="cert-card"><i class="fab fa-aws" style="font-size: 2.5rem; color: #FF9900; margin-bottom: 10px;"></i><div class="cert-name">Data Engineering</div><p style="font-size:0.8rem; color:#64748b;">Jun 2026</p><a href="https://www.credly.com/users/abhijeet-gore.30f41028" target="_blank" class="btn btn-sm btn-secondary" style="background:var(--primary-color);border:none;color:white;">Verify on Credly</a></div>
+                <div class="cert-card"><i class="fab fa-aws" style="font-size: 2.5rem; color: #FF9900; margin-bottom: 10px;"></i><div class="cert-name">Cloud Foundations</div><p style="font-size:0.8rem; color:#64748b;">Apr 2026</p><a href="https://www.credly.com/users/abhijeet-gore.30f41028" target="_blank" class="btn btn-sm btn-secondary" style="background:var(--primary-color);border:none;color:white;">Verify on Credly</a></div>
+                <div class="cert-card"><i class="fab fa-aws" style="font-size: 2.5rem; color: #FF9900; margin-bottom: 10px;"></i><div class="cert-name">Generative AI Foundations</div><p style="font-size:0.8rem; color:#64748b;">Sep 2025</p><a href="https://www.credly.com/users/abhijeet-gore.30f41028" target="_blank" class="btn btn-sm btn-secondary" style="background:var(--primary-color);border:none;color:white;">Verify on Credly</a></div>
+                <div class="cert-card"><i class="fab fa-aws" style="font-size: 2.5rem; color: #FF9900; margin-bottom: 10px;"></i><div class="cert-name">ML Foundations</div><p style="font-size:0.8rem; color:#64748b;">Sep 2025</p><a href="https://www.credly.com/users/abhijeet-gore.30f41028" target="_blank" class="btn btn-sm btn-secondary" style="background:var(--primary-color);border:none;color:white;">Verify on Credly</a></div>
+                <div class="cert-card"><i class="fab fa-aws" style="font-size: 2.5rem; color: #FF9900; margin-bottom: 10px;"></i><div class="cert-name">Machine Learning for NLP</div><p style="font-size:0.8rem; color:#64748b;">Sep 2025</p><a href="https://www.credly.com/users/abhijeet-gore.30f41028" target="_blank" class="btn btn-sm btn-secondary" style="background:var(--primary-color);border:none;color:white;">Verify on Credly</a></div>
             </div>
-            <div style="text-align: center; margin-top: 40px;">
-                <a href="https://www.linkedin.com/in/abhijeet-gore-972225282/details/certifications/" target="_blank" class="btn btn-primary">
-                    View All Certifications on LinkedIn <i class="fab fa-linkedin"></i>
-                </a>
+
+            <h3 style="margin-bottom: 20px; color: var(--primary-color); border-bottom: 2px solid #eef2ff; padding-bottom: 10px;">Oracle, Google & Industry Simulations</h3>
+            <div class="cert-grid" style="margin-bottom: 40px;">
+                <div class="cert-card"><i class="fas fa-cube" style="font-size: 2.5rem; color: #F80000; margin-bottom: 10px;"></i><div class="cert-name">Oracle Certified AI Foundations Associate</div><p style="font-size:0.8rem; color:#64748b;">Valid until Sep 2027</p><a href="https://www.credly.com/users/abhijeet-gore.30f41028" target="_blank" class="btn btn-sm btn-secondary" style="background:var(--primary-color);border:none;color:white;">Verify on Credly</a></div>
+                <div class="cert-card"><i class="fas fa-briefcase" style="font-size: 2.5rem; color: #1e40af; margin-bottom: 10px;"></i><div class="cert-name">Deloitte Data Analytics Job Simulation</div><p style="font-size:0.8rem; color:#64748b;">Nov 2025 | Forage</p><a href="https://www.theforage.com/completion-certificates/9PBTqmSxAf6zZTseP/io9DzWKe3PTsiS6GG_9PBTqmSxAf6zZTseP_NXp7KzAtpdQ3epcio_1762879409889_completion_certificate.pdf" target="_blank" class="btn btn-sm btn-secondary" style="background:var(--primary-color);border:none;color:white;">View Certificate</a></div>
+                <div class="cert-card"><i class="fas fa-briefcase" style="font-size: 2.5rem; color: #1e40af; margin-bottom: 10px;"></i><div class="cert-name">Tata Group Data Visualisation Simulation</div><p style="font-size:0.8rem; color:#64748b;">Feb 2025 | Forage</p><a href="https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/ifobHAoMjQs9s6bKS/MyXvBcppsW2FkNYCX_ifobHAoMjQs9s6bKS_NXp7KzAtpdQ3epcio_1738598158650_completion_certificate.pdf" target="_blank" class="btn btn-sm btn-secondary" style="background:var(--primary-color);border:none;color:white;">View Certificate</a></div>
+                <div class="cert-card"><i class="fab fa-google" style="font-size: 2.5rem; color: #4285F4; margin-bottom: 10px;"></i><div class="cert-name">Google Data Analytics: Foundations</div><p style="font-size:0.8rem; color:#64748b;">Coursera | Nov 2024</p><a href="https://www.coursera.org/account/accomplishments/records/97VGGETPH7Z9" target="_blank" class="btn btn-sm btn-secondary" style="background:var(--primary-color);border:none;color:white;">View Certificate</a></div>
+                <div class="cert-card"><i class="fab fa-google" style="font-size: 2.5rem; color: #4285F4; margin-bottom: 10px;"></i><div class="cert-name">Google Cloud GenAI Skill Badges</div><p style="font-size:0.8rem; color:#64748b;">2025</p></div>
+                <div class="cert-card"><i class="fas fa-graduation-cap" style="font-size: 2.5rem; color: var(--primary-color); margin-bottom: 10px;"></i><div class="cert-name">Certified DS & ML with Python</div><p style="font-size:0.8rem; color:#64748b;">Udemy | Mar 2025</p><a href="https://ude.my/UC-af7ba476-52c7-4d21-8806-2381cbc67b42" target="_blank" class="btn btn-sm btn-secondary" style="background:var(--primary-color);border:none;color:white;">View Certificate</a></div>
+                <div class="cert-card"><i class="fas fa-graduation-cap" style="font-size: 2.5rem; color: var(--primary-color); margin-bottom: 10px;"></i><div class="cert-name">Data Analysis with NumPy & Pandas</div><p style="font-size:0.8rem; color:#64748b;">Scaler | Feb 2025</p><a href="https://moonshot.scaler.com/s/sl/oMtlKkuFDn" target="_blank" class="btn btn-sm btn-secondary" style="background:var(--primary-color);border:none;color:white;">View Certificate</a></div>
+                <div class="cert-card"><i class="fas fa-chart-bar" style="font-size: 2.5rem; color: #F2C811; margin-bottom: 10px;"></i><div class="cert-name">Microsoft Power BI Fundamentals with AI Integration</div><p style="font-size:0.8rem; color:#64748b;">Office Master | Nov 2024</p></div>
+            </div>
+
+            <div style="text-align: center; margin-top: 20px;">
+                <p style="margin-bottom: 8px; font-weight: 600;">Also certified in: Prompt Engineering | DSA with Python | Python OOP (Udemy)</p>
+                <p style="margin-bottom: 15px; font-size: 0.85rem; color: #64748b;">Verify all on LinkedIn → Licenses & Certifications section</p>
+                <a href="https://www.credly.com/users/abhijeet-gore.30f41028" target="_blank" class="btn btn-primary" style="background: var(--primary-color); color: white;"><i class="fas fa-external-link-alt"></i> View All Badges on Credly</a>
             </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="section bg-light" data-aos="fade-up">
+    <!-- Achievements Section -->
+    <section id="achievements" class="section bg-light" data-aos="fade-up">
         <div class="container">
-            <h2 class="section-title">Get In Touch</h2>
-            <div class="contact-content">
-                <form class="contact-form" action="https://formsubmit.co/goreabhijeet137@gmail.com" method="POST">
-                    <!-- Hidden inputs for FormSubmit configuration -->
-                    <input type="hidden" name="_captcha" value="false">
-                    <input type="hidden" name="_subject" value="New Contact Form Submission from Portfolio">
-                    <input type="hidden" name="_template" value="table">
-                    <div class="form-group">
-                        <input type="text" name="name" placeholder="Your Name" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="email" name="email" placeholder="Your Email" required>
-                    </div>
-                    <div class="form-group">
-                        <textarea name="message" placeholder="Your Message (Please include your contact number)" rows="5" required></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Send Message</button>
-                </form>
-                <div class="social-links">
-                    <h3>Connect with me</h3>
-                    <div class="social-icons">
-                        <a href="https://www.linkedin.com/in/abhijeet-gore-972225282/" target="_blank"><i class="fab fa-linkedin"></i></a>
-                        <a href="https://github.com/AbhijeetArunGore" target="_blank"><i class="fab fa-github"></i></a>
-                        <a href="mailto:goreabhijeet137@gmail.com"><i class="fas fa-envelope"></i></a>
-                    </div>
+            <h2 class="section-title">Achievements & Milestones</h2>
+            <div class="projects-grid">
+                <div class="project-card" style="padding: 25px; border-left: 5px solid #00468C;">
+                    <i class="fas fa-trophy" style="font-size: 2rem; color: #00468C; margin-bottom: 10px;"></i>
+                    <h3>Selected — Zensar</h3>
+                    <p style="font-size: 0.9rem;">Competitively selected among candidates for Zensar's Employability Skill Development Program.</p>
+                </div>
+                <div class="project-card" style="padding: 25px; border-left: 5px solid #FF9900;">
+                    <i class="fas fa-certificate" style="font-size: 2rem; color: #FF9900; margin-bottom: 10px;"></i>
+                    <h3>2 Grade O Outstanding Internships</h3>
+                    <p style="font-size: 0.9rem;">Achieved Grade O (Outstanding, 90–100%) in both AWS Data Engineering and Cloud GenAI AICTE internships.</p>
+                </div>
+                <div class="project-card" style="padding: 25px; border-left: 5px solid #28a745;">
+                    <i class="fas fa-award" style="font-size: 2rem; color: #28a745; margin-bottom: 10px;"></i>
+                    <h3>24+ Verified Certifications</h3>
+                    <p style="font-size: 0.9rem;">Earned verified badges and certificates from AWS (13 Credly), Oracle, Google, Coursera, Udemy, Scaler, and Office Master.</p>
+                </div>
+                <div class="project-card" style="padding: 25px; border-left: 5px solid #1e40af;">
+                    <i class="fas fa-briefcase" style="font-size: 2rem; color: #1e40af; margin-bottom: 10px;"></i>
+                    <h3>Fortune 500 Industry Simulations</h3>
+                    <p style="font-size: 0.9rem;">Completed verified data analytics simulations from Deloitte Australia and Tata Group via Forage.</p>
+                </div>
+                <div class="project-card" style="padding: 25px; border-left: 5px solid #6d28d9;">
+                    <i class="fas fa-robot" style="font-size: 2rem; color: #6d28d9; margin-bottom: 10px;"></i>
+                    <h3>6 Industry Internships</h3>
+                    <p style="font-size: 0.9rem;">Completed 6 internships across Data Science, AI Development, Cloud Engineering, ML, and Analytics domains.</p>
+                </div>
+                <div class="project-card" style="padding: 25px; border-left: 5px solid #000000;">
+                    <i class="fas fa-globe" style="font-size: 2rem; color: #000000; margin-bottom: 10px;"></i>
+                    <h3>2 Live Production Websites</h3>
+                    <p style="font-size: 0.9rem;">Deployed and maintained <a href="https://abhijeetgore.me" target="_blank" style="color:var(--primary-color);">abhijeetgore.me</a> and <a href="https://newhopepetcare.co.in" target="_blank" style="color:var(--primary-color);">newhopepetcare.co.in</a> — DNS, SSL, hosting, domain management.</p>
+                </div>
+                <div class="project-card" style="padding: 25px; border-left: 5px solid #D32F2F;">
+                    <i class="fas fa-code" style="font-size: 2rem; color: #D32F2F; margin-bottom: 10px;"></i>
+                    <h3>TCS CodeVita & Google India Big Code</h3>
+                    <p style="font-size: 0.9rem;">Participated in TCS CodeVita Season 13 and Google India Big Code Challenge national programming competitions.</p>
                 </div>
             </div>
         </div>
@@ -472,21 +566,20 @@
 
     <!-- Footer -->
     <footer>
-        <div class="container footer-container">
-            <p>&copy; 2024 Abhijeet Gore. All Rights Reserved.</p>
-            <div class="footer-links">
-                <a href="https://www.linkedin.com/in/abhijeet-gore-972225282/" target="_blank">LinkedIn</a>
-                <a href="https://github.com/AbhijeetArunGore" target="_blank">GitHub</a>
+        <div class="container" style="text-align: center;">
+            <p style="margin-bottom: 20px;">© 2026 Abhijeet Gore | Data Scientist & ML Engineer</p>
+            <div class="footer-social-icons">
+                <a href="https://www.linkedin.com/in/abhijeet-gore-972225282" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://github.com/AbhijeetArunGore" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://www.credly.com/users/abhijeet-gore.30f41028" target="_blank" title="Credly Badges"><i class="fas fa-certificate"></i></a>
+                <a href="mailto:abhijeetarungore@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
             </div>
         </div>
     </footer>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        AOS.init({
-            duration: 1000,
-            once: true
-        });
+        AOS.init({ duration: 1000, once: true });
     </script>
     <script src="tilt.js"></script>
     <script src="main.js"></script>
