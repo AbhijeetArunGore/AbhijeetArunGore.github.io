@@ -1,54 +1,195 @@
+/* ==========================================================================
+   PORTFOLIO 2.0 RESPONSIVE ADAPTATIONS (LIGHT THEME)
+   Breakpoints: 1024px (Tablet Landscape), 768px (Tablet Portrait), 480px (Mobile)
+   ========================================================================== */
+
+@media (max-width: 1024px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .hero-image-wrapper {
+    order: -1;
+  }
+
+  .hero-avatar {
+    max-width: 220px;
+  }
+
+  .metrics-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+  }
+
+  .rag-lab-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 @media (max-width: 768px) {
-    .nav-links {
-        display: none;
-        position: absolute;
-        top: 70px;
-        left: 0;
-        width: 100%;
-        background: white;
-        flex-direction: column;
-        padding: 20px;
-        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        text-align: center;
-    }
+  :root {
+    --nav-height: 64px;
+  }
 
-    .nav-links.active {
-        display: flex;
-    }
+  .section {
+    padding: 64px 0;
+  }
 
-    .hamburger {
-        display: block;
-    }
+  .section-title {
+    font-size: 1.85rem;
+  }
 
-    .hero-container {
-        flex-direction: column-reverse;
-        text-align: center;
-    }
+  /* Navigation Drawer in Clean Light */
+  .hamburger {
+    display: block;
+  }
 
-    .hero-image img {
-        width: 250px;
-        height: 250px;
-    }
+  .nav-links {
+    display: none;
+    position: fixed;
+    top: var(--nav-height);
+    left: 0;
+    right: 0;
+    background: white;
+    border-bottom: 1px solid var(--border-card);
+    flex-direction: column;
+    padding: 20px;
+    gap: 10px;
+    box-shadow: var(--shadow-lg);
+  }
 
-    .hero-content h1 {
-        font-size: 2rem;
-    }
+  .nav-links.active {
+    display: flex;
+  }
 
-    .contact-content {
-        grid-template-columns: 1fr;
-    }
+  .nav-links a {
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+  }
 
-    .footer-container {
-        flex-direction: column;
-        gap: 15px;
-        text-align: center;
-    }
-    
-    .footer-links a {
-        margin: 0 10px;
-    }
+  /* Hero */
+  .hero-title {
+    font-size: 2.25rem;
+  }
 
-    .about-content {
-        padding: 20px;
-    }
+  .hero-positioning {
+    font-size: 0.92rem;
+  }
+
+  .hero-description {
+    font-size: 1rem;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .hero-actions .btn {
+    justify-content: center;
+  }
+
+  .hero-floating-stat {
+    position: static;
+    margin-top: 14px;
+    justify-content: center;
+  }
+
+  /* Metrics Strip */
+  .metrics-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  .secondary-projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .state-json-split {
+    grid-template-columns: 1fr;
+  }
+
+  .graph-timeline-strip {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+  }
+
+  .graph-timeline-strip::before {
+    display: none;
+  }
+
+  .graph-node-pill {
+    text-align: center;
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cert-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .assistant-modal-panel {
+    bottom: 74px;
+    right: 12px;
+    left: 12px;
+    width: auto;
+    max-width: none;
+    height: 72vh;
+  }
+
+  .assistant-fab-btn {
+    bottom: 16px;
+    right: 16px;
+    padding: 10px 16px;
+    font-size: 0.85rem;
+  }
+
+  .contact-buttons-row {
+    flex-direction: column;
+  }
+
+  .contact-buttons-row .btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 1.85rem;
+  }
+
+  .metrics-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project-card {
+    padding: 20px 16px;
+  }
+
+  .metadata-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .score-row {
+    grid-template-columns: 1fr;
+    gap: 4px;
+  }
+
+  .score-row span:last-child {
+    text-align: left;
+  }
 }

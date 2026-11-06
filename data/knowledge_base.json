@@ -1,0 +1,216 @@
+{
+  "candidate": {
+    "name": "Abhijeet Gore",
+    "headline": "Building Applied AI Systems for Real-World Problems",
+    "positioning": "Applied AI Engineering | GenAI | Clinical RAG | ML Systems | Data Engineering",
+    "summary": "Computer Engineering student specializing in Data Science at Savitribai Phule Pune University (Expected May 2027, CGPA 8.52/10). I focus on engineering practical AI systems: combining model capabilities with reliable data pipelines, retrieval architectures, PII de-identification boundaries, rigorous automated testing, and software engineering practices.",
+    "education": {
+      "degree": "Bachelor of Engineering in Computer Engineering (Honours in Data Science)",
+      "institution": "S.N.J.B.'s Late Sau. Kantabai Bhavarlalji Jain College of Engineering",
+      "university": "Savitribai Phule Pune University (SPPU)",
+      "graduation": "Expected May 2027",
+      "cgpa": "8.52 / 10.0"
+    },
+    "location": "Pune / Nashik, Maharashtra, India (Open to Relocation: Bengaluru, Hyderabad, Pune, Mumbai, Remote)",
+    "links": {
+      "github": "https://github.com/AbhijeetArunGore",
+      "linkedin": "https://www.linkedin.com/in/abhijeet-gore-972225282/",
+      "credly": "https://www.credly.com/users/abhijeet-gore.30f41028/badges/credly",
+      "email": "abhijeetarungore@gmail.com",
+      "portfolio": "https://abhijeetgore.me"
+    }
+  },
+  "projects": [
+    {
+      "id": "clinivara",
+      "title": "Clinivara — Privacy-First Clinical Document Intelligence",
+      "category": "Healthcare AI / Privacy Engineering",
+      "status": "Active Flagship Project",
+      "repo_url": "https://github.com/AbhijeetArunGore/Clinivara",
+      "problem": "Clinical laboratory reports contain high-risk PII/PHI (patient names, phone numbers, government IDs) that cannot legally or ethically be passed to public LLM APIs without de-identification.",
+      "solution": "An architectural 'Ironclad Privacy Shield' pipeline that runs OCR, identifies sensitive personal tokens using Microsoft Presidio and spaCy NER, cryptographically replaces them with entity tokens before LLM processing, validates extracted biomarkers against Pydantic schema gates, and outputs clinical explanations in English, Hindi, and Marathi.",
+      "architecture": "Clinical PDF/Scan Ingestion -> PyMuPDF & Tesseract OCR -> Presidio/spaCy PII Redaction Gate -> Clinical NER & Biomarker Parsing -> Pydantic Schema Validation -> Multilingual Guidance -> Audit Logging",
+      "stack": ["Python", "FastAPI", "PyMuPDF", "Tesseract OCR", "Microsoft Presidio", "spaCy", "Pydantic", "Docker"],
+      "verified_evidence": [
+        "Pre-LLM privacy de-identification gate prevents data leakage",
+        "Pydantic clinical entity validation rejects out-of-range clinical anomalies",
+        "Multilingual explanations supported in English, Hindi, and Marathi",
+        "FastAPI asynchronous REST service architecture"
+      ]
+    },
+    {
+      "id": "agentic-medical-rag",
+      "title": "Agentic Clinical RAG — Multi-Agent Evidence-Grounded Retrieval",
+      "category": "Generative AI / Multi-Agent Systems",
+      "status": "Research Prototype (61 Passing Tests)",
+      "repo_url": "https://github.com/AbhijeetArunGore/Agentic_Medical_RAG",
+      "problem": "Monolithic LLM prompts hallucinate clinical citations and fail to detect critical patient contraindications buried deep inside unstructured medical text.",
+      "solution": "A stateful multi-agent architecture built with LangGraph decomposing retrieval into bounded, specialized agents: Researcher (hybrid fusion search), Skeptic (contraindication and provenance auditing), Scribe (structured citation synthesis), and Historian (audit state persistence).",
+      "architecture": "User Encounter Query -> Researcher Agent (Dense SentenceTransformers + Sparse BM25 Fusion) -> ChromaDB Vector Store -> Skeptic Safety Gate -> Scribe Structured Synthesis -> Historian Audit Trail",
+      "stack": ["Python 3.11+", "LangGraph", "FastAPI", "ChromaDB", "SentenceTransformers", "Rank-BM25", "Docker", "pytest"],
+      "verified_evidence": [
+        "61/61 automated passing unit and integration tests",
+        "Hybrid linear weighted fusion combining semantic dense vectors and BM25 exact keyword matching",
+        "Strict ChromaDB startup validation verifying embedding space integrity",
+        "Evaluated on clinical benchmarks: 100% citation existence precision, 93.75% abstention specificity",
+        "Non-root multi-stage containerized deployment"
+      ]
+    },
+    {
+      "id": "airflow-etl",
+      "title": "Production-Grade Airflow Weather ETL Pipeline",
+      "category": "Data Engineering / Systems",
+      "status": "Completed Containerized Pipeline",
+      "repo_url": "https://github.com/AbhijeetArunGore/end_to_end_etl_pipeline_airflow",
+      "problem": "External REST APIs exhibit intermittent timeouts, schema drift, and network retries, causing partial database writes and duplicate records in downstream analytics.",
+      "solution": "An automated, containerized ETL pipeline orchestrated by Apache Airflow 3.x that queries the Open-Meteo REST API, performs schema cleaning with Pandas, and executes idempotent UPSERT operations into PostgreSQL backed by Docker Compose.",
+      "architecture": "Open-Meteo REST API -> Airflow TaskFlow HTTP Extract -> Pandas Transformation & Validation -> PostgreSQL Idempotent UPSERT -> Astronomer Runtime Monitoring",
+      "stack": ["Python 3.11", "Apache Airflow 3.x", "PostgreSQL 15", "Docker Compose", "Astronomer CLI", "Pandas"],
+      "verified_evidence": [
+        "Containerized orchestration with Astronomer runtime and Docker Compose",
+        "Idempotent database loading using SQL ON CONFLICT DO UPDATE (UPSERT) pattern",
+        "Automated task retries with exponential backoff on network failures",
+        "Verified clean execution DAGs with healthy execution states"
+      ]
+    },
+    {
+      "id": "clinical-readmission-ml",
+      "title": "Diabetes Inpatient 30-Day Readmission Risk System",
+      "category": "Applied Machine Learning / Healthcare Analytics",
+      "status": "Validated Research Prototype (31 Passing Tests)",
+      "repo_url": "https://github.com/AbhijeetArunGore/SWYNEX-Data-Science-Internship",
+      "problem": "Predicting 30-day diabetic readmission under severe class imbalance without data leakage between repeat hospital visits for the same patient.",
+      "solution": "A reproducible, leakage-free machine learning investigation on the UCI Diabetes 130-US Hospitals dataset (101,763 encounters across 71,515 patients). Enforced strict patient-grouped train/test splitting, ICD-9 clinical categorization, and cost-sensitive evaluation trade-offs.",
+      "architecture": "UCI EHR Data -> Patient-Grouped Stratified Split -> ICD-9 Clinical Grouping -> Missingness Indicator Encoding -> Logistic & Tree Classifiers -> Cost-Sensitive Threshold Tuning",
+      "stack": ["Python 3.12", "Scikit-learn", "Pandas", "NumPy", "pytest", "Black"],
+      "verified_evidence": [
+        "101,763 hospital encounters and 71,515 unique patients analyzed",
+        "31 passing automated tests verifying pipeline reproducibility",
+        "Verified benchmark: ROC-AUC 0.6435, Recall 52.26%, Precision 16.48% under severe class imbalance",
+        "Explicitly documented clinical disclaimers regarding observational retrospective data"
+      ]
+    },
+    {
+      "id": "fraud-detection",
+      "title": "High-Throughput Financial Fraud Detection Pipeline",
+      "category": "Applied Machine Learning / Anomaly Detection",
+      "status": "Completed Engineering Workflow",
+      "repo_url": "https://github.com/AbhijeetArunGore/Fraud_Detection_Jupyter_Data_Cleaning_Processing",
+      "problem": "Extreme class imbalance (less than 0.2% positive fraud transactions) and heavy outlier distributions in simulated financial transaction data (PaySim).",
+      "solution": "An end-to-end data preparation and classification workflow featuring IQR and Z-score outlier detection, feature engineering on balance differences, class-weight calibration, and gradient boosting with XGBoost.",
+      "architecture": "PaySim Financial Transactions -> Anomaly & Outlier Filtering -> Feature Transformation (Balance Deltas) -> Class Weight Balancing -> XGBoost Supervised Classification -> PR-AUC Evaluation",
+      "stack": ["Python", "XGBoost", "Scikit-learn", "Pandas", "NumPy", "Matplotlib"],
+      "verified_evidence": [
+        "Robust handling of severe minority-class fraud instances",
+        "Engineered financial consistency features (e.g., origin/destination balance differentials)",
+        "Precision-Recall focused evaluation rather than deceptive raw accuracy"
+      ]
+    },
+    {
+      "id": "customer-churn",
+      "title": "Customer Churn Prediction & Business Intelligence",
+      "category": "Data Analytics & Predictive Modeling",
+      "status": "Completed Analytical System",
+      "repo_url": "https://github.com/AbhijeetArunGore/customer-churn-prediction-sql-python-powerbi",
+      "problem": "Identifying at-risk customer segments and translating predictive machine learning outputs into actionable retention strategies for non-technical business stakeholders.",
+      "solution": "An integrated end-to-end pipeline using SQL queries for data aggregation and feature extraction, Scikit-learn classification models for risk scoring, and an interactive Power BI dashboard surfacing churn KPIs and revenue exposure.",
+      "architecture": "Relational Database -> SQL Aggregation & Window Functions -> Python Feature Engineering & Scikit-learn Modeling -> Prediction Scoring -> Power BI Executive Dashboard",
+      "stack": ["SQL", "Python", "Scikit-learn", "Power BI", "Pandas"],
+      "verified_evidence": [
+        "Multi-stage pipeline connecting SQL data layer to Python ML and Power BI visualization",
+        "Segmented risk scoring informing customer retention prioritization",
+        "Business-oriented KPI tracking"
+      ]
+    }
+  ],
+  "experience": [
+    {
+      "company": "AI Leela (OM Intelligence)",
+      "role": "AI/ML, Deep Learning & Product Deployment Intern",
+      "period": "Dec 2025 – Feb 2026",
+      "type": "Industry Internship",
+      "bullets": [
+        "Developed Python application logic to parse medical reports and generate patient-friendly insights.",
+        "Built document extraction workflows and OCR processing for unstructured lab data.",
+        "Created interactive analytics for historical biomarker trend visualization.",
+        "Participated in agile development and REST API integration."
+      ]
+    },
+    {
+      "company": "SWYNEX",
+      "role": "Clinical Data Science Intern",
+      "period": "2025 – 2026",
+      "type": "Data Science Internship",
+      "bullets": [
+        "Engineered clinical data pipeline for the UCI Diabetes 130-US Hospitals dataset (101,763 encounters).",
+        "Implemented patient-grouped cross-validation preventing data leakage between repeat patient admissions.",
+        "Constructed clinical categorization pipelines mapping ICD-9 diagnostic codes into validated medical categories.",
+        "Authored automated test suite (31 tests) validating data cleaning integrity and schema contracts."
+      ]
+    },
+    {
+      "company": "Zensar Technologies",
+      "role": "Data Science & Python Trainee (ESD Program)",
+      "period": "Mar 2026 – Apr 2026",
+      "type": "Selective Training Program",
+      "bullets": [
+        "Competitively selected for Zensar's Employability Skill Development (ESD) program.",
+        "Mastered advanced Python object-oriented programming (inheritance, polymorphism, exception handling).",
+        "Executed complex SQL & PL/SQL queries including analytical window functions, stored procedures, and schema optimization."
+      ]
+    },
+    {
+      "company": "AICTE EduSkills + AWS Academy",
+      "role": "Data Engineering & Cloud GenAI Intern",
+      "period": "2025 – 2026",
+      "type": "Virtual Internship",
+      "bullets": [
+        "Achieved Grade O (Outstanding 90–100%) in AWS Data Engineering and Generative AI cohorts.",
+        "Engineered cloud storage, ETL workflows, and relational database schemas on AWS Academy infrastructure."
+      ]
+    },
+    {
+      "company": "Deloitte Australia (via Forage)",
+      "role": "Data Analytics Job Simulation",
+      "period": "Nov 2025",
+      "type": "Verified Industry Simulation",
+      "bullets": [
+        "Analyzed complex datasets to produce business intelligence reports and strategic client recommendations.",
+        "Verified Credential ID: 9gfczgpuvhcDHFY53."
+      ]
+    },
+    {
+      "company": "Tata Group (via Forage)",
+      "role": "Data Visualisation Job Simulation",
+      "period": "Feb 2025",
+      "type": "Verified Industry Simulation",
+      "bullets": [
+        "Built executive data visualizations and KPI dashboards communicating operational insights to C-suite stakeholders.",
+        "Verified Credential ID: uGz88ZzRS84WeQdKn."
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "question": "What is Clinivara and how does it protect patient privacy?",
+      "answer": "Clinivara is a clinical document intelligence backend that processes medical lab reports and consultation notes. Its core engineering principle is zero-knowledge medical understanding: before any text reaches an LLM, a strict local PII de-identification gate (using Microsoft Presidio and spaCy NER) detects and sanitizes names, phone numbers, and IDs. Extracted clinical metrics are then verified against Pydantic schema validation rules, and explanations are generated in English, Hindi, and Marathi."
+    },
+    {
+      "question": "How does your Clinical RAG system work?",
+      "answer": "Agentic Clinical RAG is a stateful multi-agent system built on LangGraph. Instead of a naive single-prompt RAG, it separates responsibilities across 4 bounded agents: Researcher (hybrid fusion search combining SentenceTransformers and BM25), Skeptic (evaluates evidence for contraindications and citation existence), Scribe (formats evidence-grounded recommendations), and Historian (preserves encounter audit trails). It has 61 automated tests verifying state transitions and ChromaDB vector index integrity."
+    },
+    {
+      "question": "What was your hardest engineering challenge?",
+      "answer": "In the SWYNEX clinical readmission project, the primary challenge was preventing data leakage under extreme class imbalance. Because individual patients have multiple hospital visits across the 10-year dataset, random record-level train/test splits leaked patient-specific clinical trajectories into the validation set, creating artificially inflated metrics. The solution was implementing strict patient-level grouped splitting, ensuring no patient's encounters appeared in both train and test sets, yielding an honest, reproducible ROC-AUC of 0.6435."
+    },
+    {
+      "question": "How do you evaluate retrieval quality in your RAG systems?",
+      "answer": "I evaluate RAG using multi-dimensional offline test harnesses: In-Scope Hit Rate@K, Citation Existence Precision (verifying that every generated clinical claim maps to an actual retrieved document ID), and Abstention Specificity (verifying that the system abstains or flags uncertainty when evidence is insufficient or contradictory rather than hallucinating)."
+    },
+    {
+      "question": "What technologies do you use for backend engineering and pipelines?",
+      "answer": "For backend engineering, I use Python, FastAPI, and Flask with Pydantic for strict runtime validation. For data engineering and orchestration, I use Apache Airflow 3.x with Docker Compose, PostgreSQL, and Pandas, implementing idempotent UPSERT patterns to ensure pipeline reruns never duplicate data."
+    }
+  ]
+}
+

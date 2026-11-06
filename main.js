@@ -1,70 +1,111 @@
-// Mobile Menu Toggle
-const hamburger = document.querySelector('.hamburger');
-const navLinks = document.querySelector('.nav-links');
+/**
+ * Portfolio 2.0 Main Application Controller
+ * Handles Navigation, Active Section Spy, Lab Tabs, and UI interactions.
+ */
 
-hamburger.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
+document.addEventListener("DOMContentLoaded", () => {
+  initNavbar();
+  initLabTabs();
+  initScrollSpy();
+  initCopyEmail();
 });
 
-// Close menu when clicking a link
-document.querySelectorAll('.nav-links a').forEach(link => {
-    link.addEventListener('click', () => {
-        navLinks.classList.remove('active');
+// Mobile Navigation Toggle
+function initNavbar() {
+  const hamburger = document.querySelector(".hamburger");
+  const navLinks = document.querySelector(".nav-links");
+  const header = document.getElementById("header");
+
+  if (hamburger && navLinks) {
+    hamburger.addEventListener("click", () => {
+      const expanded = hamburger.getAttribute("aria-expanded") === "true";
+      hamburger.setAttribute("aria-expanded", !expanded);
+      navLinks.classList.toggle("active");
     });
-});
 
-// Sticky Header Shadow on Scroll
-const header = document.getElementById('header');
+    document.querySelectorAll(".nav-links a").forEach(link => {
+      link.addEventListener("click", () => {
+        navLinks.classList.remove("active");
+        hamburger.setAttribute("aria-expanded", "false");
+      });
+    });
+  }
 
-window.addEventListener('scroll', () => {
-    if (window.scrollY > 50) {
-        header.style.boxShadow = '0 4px 6px -1px rgba(0, 0, 0, 0.2)';
-        header.style.height = '60px';
+  // Header Scroll Elevation
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 40) {
+      header?.classList.add("header-scrolled");
     } else {
-        header.style.boxShadow = '0 4px 6px -1px rgba(0, 0, 0, 0.1)';
-        header.style.height = '70px';
+      header?.classList.remove("header-scrolled");
     }
-});
+  }, { passive: true });
+}
 
-// Typing Effect
-const textElement = document.querySelector('.typewriter');
-const texts = ['Data Science Enthusiast', 'Machine Learning Engineer', 'Data Analyst', 'Web Developer'];
-let count = 0;
-let index = 0;
-let currentText = '';
-let letter = '';
-let isDeleting = false;
+// Lab Tab Switcher
+function initLabTabs() {
+  const triggers = document.querySelectorAll(".lab-tab-trigger");
+  const panels = document.querySelectorAll(".lab-tab-panel");
 
-(function type() {
-    if (count === texts.length) {
-        count = 0;
-    }
-    currentText = texts[count];
+  triggers.forEach(btn => {
+    btn.addEventListener("click", () => {
+      const targetId = btn.getAttribute("data-tab");
 
-    if (isDeleting) {
-        letter = currentText.slice(0, --index);
-    } else {
-        letter = currentText.slice(0, ++index);
-    }
+      triggers.forEach(t => t.classList.remove("active"));
+      panels.forEach(p => p.classList.remove("active"));
 
-    if(textElement) {
-        textElement.textContent = letter;
-    }
-    
-    let typeSpeed = 100;
+      btn.classList.add("active");
+      const targetPanel = document.getElementById(targetId);
+      if (targetPanel) {
+        targetPanel.classList.add("active");
+      }
+    });
+  });
+}
 
-    if (isDeleting) {
-        typeSpeed /= 2;
-    }
+// Active Section Scroll Spy
+function initScrollSpy() {
+  const sections = document.querySelectorAll("section[id]");
+  const navLinks = document.querySelectorAll(".nav-links a[href^='#']");
 
-    if (!isDeleting && letter.length === currentText.length) {
-        typeSpeed = 2000; // Pause at end of word
-        isDeleting = true;
-    } else if (isDeleting && letter.length === 0) {
-        isDeleting = false;
-        count++;
-        typeSpeed = 500; // Pause before new word
-    }
+  function spy() {
+    const scrollPos = window.scrollY + 120;
 
-    setTimeout(type, typeSpeed);
-}());
+    sections.forEach(sec => {
+      const top = sec.offsetTop;
+      const height = sec.offsetHeight;
+      const id = sec.getAttribute("id");
+
+      if (scrollPos >= top && scrollPos < top + height) {
+        navLinks.forEach(link => {
+          link.classList.remove("active");
+          if (link.getAttribute("href") === `#${id}`) {
+            link.classList.add("active");
+          }
+        });
+      }
+    });
+  }
+
+  window.addEventListener("scroll", spy, { passive: true });
+  spy();
+}
+
+// Copy Email Utility
+function initCopyEmail() {
+  document.querySelectorAll(".btn-copy-email").forEach(btn => {
+    btn.addEventListener("click", () => {
+      const email = "abhijeetarungore@gmail.com";
+      navigator.clipboard.writeText(email).then(() => {
+        const originalHtml = btn.innerHTML;
+        btn.innerHTML = `<i class="fas fa-check"></i> Email Copied!`;
+        btn.classList.add("btn-copied");
+        setTimeout(() => {
+          btn.innerHTML = originalHtml;
+          btn.classList.remove("btn-copied");
+        }, 2200);
+      }).catch(err => {
+        window.location.href = `mailto:${email}`;
+      });
+    });
+  });
+}
